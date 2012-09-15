@@ -1,9 +1,9 @@
 plugin.org {
 
-  # cat=Organiser Pages/page/351; type=+int; label= page uid reference:Uid of your reference page
+  # cat=Organiser References/page/351; type=+int; label= page uid reference:Uid of your reference page
   pages.references =
 
-  # cat=Organiser Pages/page/352; type=+int; label= sysfolder uid reference:Uid of the sysfolder with the reference data
+  # cat=Organiser References/page/352; type=+int; label= sysfolder uid reference:Uid of the sysfolder with the reference data
   sysfolder.references =
 
 }
