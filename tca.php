@@ -266,7 +266,7 @@ switch($confArr['full_wizardSupport'])
     'allowed'       => '',
     'disallowed'    => 'php,php3',
     'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
-    'uploadfolder'  => 'uploads/tx_org',
+    'uploadfolder'  => 'uploads/tx_orgreferences',
     'size'          => 10,
     'minitems'      => 0,
     'maxitems'      => 99,
@@ -277,18 +277,18 @@ switch($confArr['full_wizardSupport'])
     'internal_tool' => 'file',
     'allowed'       => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
     'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
-    'uploadfolder'  => 'uploads/tx_org',
+    'uploadfolder'  => 'uploads/tx_orgreferences',
     'show_thumbs'   => 1,
     'size'          => 3,
     'minitems'      => 0,
     'maxitems'      => 20,
   );
 
-  $conf_input_30_trim = array (
-    'type' => 'input',
-    'size' => '30',
-    'eval' => 'trim'
-  );
+//  $conf_input_30_trim = array (
+//    'type' => 'input',
+//    'size' => '30',
+//    'eval' => 'trim'
+//  );
 
   $conf_input_30_trimRequired = array (
     'type' => 'input',
