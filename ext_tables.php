@@ -20,6 +20,7 @@ if (!defined ('TYPO3_MODE'))
   //    fe_users
   //    tx_org_cal
   //    tx_org_headquarters
+  //    tx_org_news
   // TCA tables
   //    orgreferences
   //    orgreferences_client
@@ -167,6 +168,7 @@ t3lib_extMgm::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKE
   // fe_users
   // tx_org_cal
   // tx_org_headquarters
+  // tx_org_cal
 
   // draft field tx_orgreferences
 $arr_tx_orgreferences = array (
@@ -382,6 +384,52 @@ $str_showitem                                           = implode('--div--;', $a
 $TCA['tx_org_headquarters']['types']['0']['showitem']   = $str_showitem;
   // Insert div [references] with fields to TCAtypes
   // tx_org_headquarters
+
+  // tx_org_news
+t3lib_div::loadTCA('tx_org_news');
+
+  // typeicons: Add type_icon
+$TCA['tx_org_news']['ctrl']['typeicons']['tx_org_repertoire'] =
+  t3lib_extmgm::extRelPath($_EXTKEY) . 'ext_icon/references.gif';
+  // typeicons: Add type_icon
+
+  // showRecordFieldList: Add field tx_orgreferences
+$showRecordFieldList = $TCA['tx_org_news']['interface']['showRecordFieldList'];
+$showRecordFieldList = $showRecordFieldList.',tx_orgreferences';
+$TCA['tx_org_news']['interface']['showRecordFieldList'] = $showRecordFieldList;
+  // showRecordFieldList: Add field tx_orgreferences
+
+  // columns: Add field tx_orgreferences
+$TCA['tx_org_news']['columns']['tx_orgreferences']                  = $arr_tx_orgreferences;
+$TCA['tx_org_news']['columns']['tx_orgreferences']['label']         =
+  'LLL:EXT:orgreferences/locallang_db.xml:tx_org_news.tx_orgreferences';
+$TCA['tx_org_news']['columns']['tx_orgreferences']['config']['MM']  = 'tx_orgreferences_mm_tx_org_news';
+  // columns: Add field tx_orgreferences
+
+  // columns: extend type
+$TCA['tx_org_news']['columns']['type']['config']['items']['tx_orgreferences'] = array
+(
+  '0' => 'LLL:EXT:orgreferences/locallang_db.xml:tx_org_news.type.tx_orgreferences',
+  '1' => 'tx_orgreferences',
+  '2' => 'EXT:orgreferences/ext_icon/references.gif',
+);
+  // columns: extend type
+
+  // Insert type [references] with fields to TCAtypes
+$TCA['tx_org_news']['types']['tx_orgreferences']['showitem'] =
+  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_news.div_news,
+    type,title,
+    --palette--;LLL:EXT:org/locallang_db.xml:palette.datetime_datetimeend;datetime_datetimeend,
+    tx_org_newstype,tx_orgreferences,'.
+  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_news.div_event,
+    tx_org_location,tx_org_newsentrance,'.
+  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_news.div_department,
+    tx_org_department,'.
+  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_news.div_control,
+    hidden;;1;;,fe_group'.
+  ''
+;
+  // tx_org_news
 
   // Configure third party tables
 

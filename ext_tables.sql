@@ -7,17 +7,19 @@
 # tx_orgreferences_sector
 # tx_orgreferences_tool
 # tx_orgreferences_mm_fe_users
-# tx_orgreferences_mm_tx_org_headquarters
 # tx_orgreferences_mm_tx_orgreferences_achievement
 # tx_orgreferences_mm_tx_orgreferences_business
 # tx_orgreferences_mm_tx_orgreferences_client
 # tx_orgreferences_mm_tx_orgreferences_sector
 # tx_orgreferences_mm_tx_orgreferences_tool
+# tx_orgreferences_mm_tx_org_headquarters
 # tx_orgreferences_mm_tx_org_cal
+# tx_orgreferences_mm_tx_org_news
 
 # fe_users
 # tx_org_cal
 # tx_org_headquarters
+# tx_org_news
 
 
 
@@ -294,6 +296,21 @@ CREATE TABLE tx_orgreferences_mm_tx_org_cal (
 
 
 #
+# Table structure for table 'tx_orgreferences_mm_tx_org_news'
+#
+CREATE TABLE tx_orgreferences_mm_tx_org_news (
+  uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+  uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+  tablenames varchar(30) DEFAULT '' NOT NULL,
+  sorting         int(11) unsigned DEFAULT '0' NOT NULL,
+  sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+  KEY uid_local (uid_local),
+  KEY uid_foreign (uid_foreign)
+);
+
+
+
+#
 # Table structure for table 'fe_users'
 #
 CREATE TABLE fe_users (
@@ -316,5 +333,14 @@ CREATE TABLE tx_org_cal (
 #
 CREATE TABLE tx_org_headquarters (
   tx_orgreferences_premium tinytext,
+  tx_orgreferences tinytext
+);
+
+
+
+#
+# Table structure for table 'tx_org_news'
+#
+CREATE TABLE tx_org_news (
   tx_orgreferences tinytext
 );
