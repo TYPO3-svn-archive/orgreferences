@@ -419,10 +419,10 @@ $TCA['tx_org_news']['columns']['type']['config']['items']['tx_orgreferences'] = 
 $TCA['tx_org_news']['types']['tx_orgreferences']['showitem'] =
   '--div--;LLL:EXT:org/locallang_db.xml:tx_org_news.div_news,
     type,title,
-    --palette--;LLL:EXT:org/locallang_db.xml:palette.datetime_datetimeend;datetime_datetimeend,
-    tx_org_newstype,tx_orgreferences,'.
-  '--div--;LLL:EXT:org/locallang_db.xml:tx_org_news.div_event,
-    tx_org_location,tx_org_newsentrance,'.
+    --palette--;LLL:EXT:org/locallang_db.xml:palette.datetime_archivedate;datetime_archivedate,
+    tx_org_newscat,'.
+  '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_org_news.div_tx_orgreferences,
+    tx_orgreferences,'.
   '--div--;LLL:EXT:org/locallang_db.xml:tx_org_news.div_department,
     tx_org_department,'.
   '--div--;LLL:EXT:org/locallang_db.xml:tx_org_news.div_control,

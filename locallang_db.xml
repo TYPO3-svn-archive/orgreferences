@@ -38,6 +38,7 @@
       <label index="tx_org_headquarters.div_tx_orgreferences">References</label>
       <label index="tx_org_headquarters.tx_orgreferences">Reference</label>
       <label index="tx_org_headquarters.tx_orgreferences_premium">Premium provider</label>
+      <label index="tx_org_news.div_tx_orgreferences">References</label>
       <label index="tx_org_news.type.tx_orgreferences">Take it from the references table</label>
       <label index="tx_org_news.tx_orgreferences">References</label>
 
@@ -162,6 +163,7 @@
       <label index="tx_org_headquarters.div_tx_orgreferences">Referenzen</label>
       <label index="tx_org_headquarters.tx_orgreferences">Referenz</label>
       <label index="tx_org_headquarters.tx_orgreferences_premium">Premium Anbieter</label>
+      <label index="tx_org_news.div_tx_orgreferences">Referenzen</label>
       <label index="tx_org_news.type.tx_orgreferences">Aus den Referenzen</label>
       <label index="tx_org_news.tx_orgreferences">Referenzen</label>
 
