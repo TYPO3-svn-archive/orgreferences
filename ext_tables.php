@@ -232,6 +232,7 @@ $TCA['fe_users']['columns']['tx_orgreferences']                  = $arr_tx_orgre
 $TCA['fe_users']['columns']['tx_orgreferences']['label']         =
   'LLL:EXT:orgreferences/locallang_db.xml:fe_users.tx_orgreferences';
 $TCA['fe_users']['columns']['tx_orgreferences']['config']['MM']  = 'tx_orgreferences_mm_fe_users';
+$TCA['fe_users']['columns']['tx_orgreferences']['config']['MM_opposite_field']  = 'fe_users';
   // Add field tx_orgreferences
 
   // Insert div [references] at position $int_div_position
