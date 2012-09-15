@@ -57,7 +57,7 @@ CREATE TABLE tx_orgreferences (
   imagecaption text,
   imageseo text,
   header text,
-  header text,
+  headerseo text,
   documents text,
   hidden tinyint(4) DEFAULT '0' NOT NULL,
   starttime int(11) DEFAULT '0' NOT NULL,
