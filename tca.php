@@ -405,7 +405,7 @@ switch($confArr['full_wizardSupport'])
 $TCA['tx_orgreferences'] = array (
   'ctrl' => $TCA['tx_orgreferences']['ctrl'],
   'interface' => array (
-    'showRecordFieldList' =>  'title, short, text, static_countries, static_country_zones, location, longitude, latitude, staff, url,'.
+    'showRecordFieldList' =>  'title, short, text, datetime, static_countries, static_country_zones, location, longitude, latitude, staff, url,'.
                               'tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_business, tx_orgreferences_tool,'.
                               'fe_users,tx_org_headquarters,'.
                               'tx_org_cal,tx_org_news,'.
@@ -558,7 +558,7 @@ $TCA['tx_orgreferences'] = array (
     ),
   ),
   'types' => array (
-    '0' => array('showitem' =>  '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_references,         title, uid_extern, short, text;;;richtext[]:rte_transform[mode=ts];, static_countries, static_country_zones, location, longitude, latitude, staff, url,'.
+    '0' => array('showitem' =>  '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_references,         title, uid_extern, short, text;;;richtext[]:rte_transform[mode=ts];, datetime, static_countries, static_country_zones, location, longitude, latitude, staff, url,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_categories,         tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_business, tx_orgreferences_tool,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_user_headquarter,   fe_users,tx_org_headquarters,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_cal_news,           tx_org_cal,tx_org_news,'.
