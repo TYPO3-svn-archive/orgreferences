@@ -4,7 +4,7 @@
 # tx_orgreferences_client
 # tx_orgreferences_cat
 # tx_orgreferences_course
-# tx_orgreferences_degree
+# tx_orgreferences_achievement
 # tx_orgreferences_focus
 # tx_orgreferences_business
 # tx_orgreferences_sector
@@ -14,7 +14,7 @@
 # tx_orgreferences_mm_tx_orgreferences_client
 # tx_orgreferences_mm_tx_orgreferences_cat
 # tx_orgreferences_mm_tx_orgreferences_course
-# tx_orgreferences_mm_tx_orgreferences_degree
+# tx_orgreferences_mm_tx_orgreferences_achievement
 # tx_orgreferences_mm_tx_orgreferences_focus
 # tx_orgreferences_mm_tx_orgreferences_business
 # tx_orgreferences_mm_tx_orgreferences_sector
@@ -57,7 +57,7 @@ CREATE TABLE tx_orgreferences (
   tx_orgreferences_focus tinytext,
   tx_orgreferences_sector tinytext,
   tx_orgreferences_client tinytext,
-  tx_orgreferences_degree tinytext,
+  tx_orgreferences_achievement tinytext,
   tx_orgreferences_course tinytext,
   tx_orgreferences_business tinytext,
   tx_orgreferences_type tinytext,
@@ -146,9 +146,9 @@ CREATE TABLE tx_orgreferences_course (
 
 
 #
-# Table structure for table 'tx_orgreferences_degree'
+# Table structure for table 'tx_orgreferences_achievement'
 #
-CREATE TABLE tx_orgreferences_degree (
+CREATE TABLE tx_orgreferences_achievement (
   uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
   pid int(11) unsigned DEFAULT '0' NOT NULL,
   tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -306,9 +306,9 @@ CREATE TABLE tx_orgreferences_mm_tx_orgreferences_course (
 
 
 #
-# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_degree'
+# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_achievement'
 #
-CREATE TABLE tx_orgreferences_mm_tx_orgreferences_degree (
+CREATE TABLE tx_orgreferences_mm_tx_orgreferences_achievement (
   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
   tablenames varchar(30) DEFAULT '' NOT NULL,

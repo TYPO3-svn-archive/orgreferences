@@ -25,7 +25,7 @@ if (!defined ('TYPO3_MODE'))
   //    orgreferences_client
   //    orgreferences_cat
   //    orgreferences_course
-  //    orgreferences_degree
+  //    orgreferences_achievement
   //    orgreferences_focus
   //    orgreferences_business
   //    orgreferences_sector
@@ -397,7 +397,7 @@ $TCA['tx_org_headquarters']['types']['0']['showitem']   = $str_showitem;
   // orgreferences_client
   // orgreferences_cat
   // orgreferences_course
-  // orgreferences_degree
+  // orgreferences_achievement
   // orgreferences_focus
   // orgreferences_business
   // orgreferences_sector
@@ -495,10 +495,10 @@ $TCA['tx_orgreferences_course'] = array (
 );
   // orgreferences_course ///////////////////////////////////////////////////////////////////
 
-  // orgreferences_degree ///////////////////////////////////////////////////////////////////
-$TCA['tx_orgreferences_degree'] = array (
+  // orgreferences_achievement ///////////////////////////////////////////////////////////////////
+$TCA['tx_orgreferences_achievement'] = array (
   'ctrl' => array (
-    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_degree',
+    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_achievement',
     'label'             => 'title',
     'tstamp'            => 'tstamp',
     'crdate'            => 'crdate',
@@ -512,10 +512,10 @@ $TCA['tx_orgreferences_degree'] = array (
     'hideAtCopy'        => false,
     'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
     'thumbnail'         => 'image',
-    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/degree.gif',
+    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/archievement.gif',
   ),
 );
-  // orgreferences_degree ///////////////////////////////////////////////////////////////////
+  // orgreferences_achievement ///////////////////////////////////////////////////////////////////
 
   // orgreferences_focus ///////////////////////////////////////////////////////////////////
 $TCA['tx_orgreferences_focus'] = array (

@@ -5,7 +5,7 @@ mod {
       tx_orgreferences_client, 
       tx_orgreferences_cat,
       tx_orgreferences_course, 
-      tx_orgreferences_degree, 
+      tx_orgreferences_achievement, 
       tx_orgreferences_focus,
       tx_orgreferences_business, 
       tx_orgreferences_sector, 

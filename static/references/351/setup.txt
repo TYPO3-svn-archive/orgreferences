@@ -50,9 +50,9 @@ plugin.tx_browser_pi1 {
           my_cat {
             data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_cat.title
           }
-          my_degree = TEXT
-          my_degree {
-            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_degree.title
+          my_achievement = TEXT
+          my_achievement {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_achievement.title
           }
           my_sector = TEXT
           my_sector {
@@ -96,7 +96,7 @@ plugin.tx_browser_pi1 {
           tx_orgreferences.rating,
           tx_org_headquarters.title,
           tx_orgreferences_cat.title,
-          tx_orgreferences_degree.title,
+          tx_orgreferences_achievement.title,
           tx_orgreferences_sector.title,
           tx_orgreferences_type.title,
           static_country_zones.zn_name_local
@@ -231,12 +231,12 @@ plugin.tx_browser_pi1 {
               wrap = <span class="selectbox selectbox_tx_orgreferences_cat">|</span>
             }
           }
-          tx_orgreferences_degree {
+          tx_orgreferences_achievement {
             title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
             title {
               first_item {
                 stdWrap {
-                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_degree
+                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_achievement
                 }
               }
               wrap {
@@ -246,7 +246,7 @@ plugin.tx_browser_pi1 {
                   }
                 }
               }
-              wrap = <span class="selectbox selectbox_tx_orgreferences_degree">|</span>
+              wrap = <span class="selectbox selectbox_tx_orgreferences_achievement">|</span>
             }
           }
           tx_orgreferences_sector {
@@ -285,9 +285,9 @@ plugin.tx_browser_pi1 {
           my_cat {
             data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_cat.title
           }
-          my_degree = TEXT
-          my_degree {
-            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_degree.title
+          my_achievement = TEXT
+          my_achievement {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_achievement.title
           }
           my_sector = TEXT
           my_sector {
@@ -342,7 +342,7 @@ plugin.tx_browser_pi1 {
           tx_orgreferences.documents,
           tx_org_headquarters.title,
           tx_orgreferences_cat.title,
-          tx_orgreferences_degree.title,
+          tx_orgreferences_achievement.title,
           tx_orgreferences_sector.title,
           tx_orgreferences_type.title,
           static_country_zones.zn_name_local
