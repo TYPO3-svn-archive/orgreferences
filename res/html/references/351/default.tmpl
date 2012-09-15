@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <body>
+
+<!-- ###TEMPLATE_LIST### begin -->
+<!-- ###LIST_TITLE### begin -->
+        <div class="backgroundTop backgroundTop-###VIEW###-###MODE###">
+          ###MY_TITLE###
+        </div>
+<!-- ###LIST_TITLE### end -->
+<!-- ###SEARCHFORM### begin -->
+        <div class="searchbox searchbox-###VIEW###-###MODE###">
+          <form action="###ACTION###" method="post" >
+            <fieldset>
+              <legend>###MY_SEARCH_LEGEND###</legend>
+              <div style="float:right; text-align:right;">
+                <input class="reset" type="button" onclick="location='###MY_URL###'" value="###MY_RESET###" />
+                <input class="button" type="submit" value="###BUTTON###" />
+              </div>
+              <input type="hidden" name="no_cache" value="1" />
+              <input class="sword" type="text" name="tx_browser_pi1[sword]" onfocus="if(this.value =='###SWORD_DEFAULT###') this.value=''" value="###SWORD###" />
+              <div class="filter">
+                ###TX_ORG_HEADQUARTERS.TITLE###
+                ###STATIC_COUNTRY_ZONES.ZN_NAME_LOCAL###
+                ###TX_ORGREFERENCES_CAT.TITLE###
+                ###TX_ORGREFERENCES_DEGREE.TITLE###
+                ###TX_ORGREFERENCES_SECTOR.TITLE###
+                ###TX_ORGREFERENCES.RATING###
+              </div>
+            </fieldset>
+          </form>
+          ###RESULTPHRASE###
+        </div><!-- ###SEARCHFORM### end -->
+        <div class="listarea">
+<!-- ###CATEGORY_MENU### begin -->
+        <!-- Enable the subpart CATEGORY_MENU: Set plugin.tx_browser_pi1.displayList.display.category_menu = 1 -->
+        <div class="category_menu category_menu-###VIEW###-###MODE###">
+          <!-- Add a category_menu with the ###TABLE.FIELD### syntax and configure your category_menu like a filter with TypoScript -->
+        </div><!-- ###CATEGORY_MENU### end -->
+<!-- ###AZSELECTOR### begin -->
+          <div class="azSelector azSelector-###UL_VIEW###-###UL_MODE###">
+            <ul class="azSelector azSelector-###UL_VIEW###-###UL_MODE###"><!-- ###AZSELECTORTABS### begin -->
+              <li###LI_CLASS###>###TAB###</li><!-- ###AZSELECTORTABS### end -->
+            </ul>
+          </div><!-- ###AZSELECTOR### end -->
+<!-- ###PAGEBROWSER### begin -->
+          <div class="browsebox browsebox-###VIEW###-###MODE###">
+            ###RESULT_AND_ITEMS###
+          </div><!-- ###PAGEBROWSER### end -->
+<!-- ###MODESELECTOR### begin -->
+          <div class="modeSelector modeSelector-###VIEW###-###MODE###">
+            <ul class="modeSelector modeSelector-###VIEW###-###MODE###"><!-- ###MODESELECTORTABS### begin -->
+              <li###CLASS###>###TABS###</li><!-- ###MODESELECTORTABS### end -->
+            </ul>
+          </div><!-- ###MODESELECTOR### end -->
+          <!-- ###LISTVIEW### begin -->
+          <div class="###VIEW###view ###VIEW###view-###MODE###">
+            <!-- ###LISTHEAD### begin --><!-- ###LISTHEADITEM### begin -->###ITEM###<!-- ###LISTHEADITEM### end --><!-- ###LISTHEAD### end -->
+<!-- ###GROUPBY### begin -->
+<!-- ###GROUPBYHEAD### begin -->
+            <h3>
+              ###GROUPBY_GROUPNAME###
+            </h3>
+<!-- ###GROUPBYHEAD### end -->
+<!-- ###GROUPBYBODY### begin -->
+            <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
+            <div class="record01">
+              <div style="float:right;">
+                ###TX_ORGREFERENCES.RATING###
+                ###SOCIALMEDIA_BOOKMARKS###
+              </div>
+              ###TX_ORG_HEADQUARTERS.TITLE###
+              ###TX_ORGREFERENCES.TITLE###
+              ###TX_ORGREFERENCES.SHORT###
+              <table###MY_SUMMARY###>
+                ###MY_CAPTION###
+                <thead>
+                  <tr>
+                    <th class="tx_orgreferences_sector">###MY_UID_EXTERN###</th>
+                    <th class="tx_orgreferences_sector">###MY_SECTOR###</th>
+                    <th class="tx_orgreferences_degree">###MY_DEGREE###</th>
+                    <th class="tx_orgreferences_cat">###MY_CAT###</th>
+                    <th class="static_country_zones">###MY_STATIC_COUNTRY_ZONES###</th>
+                    <th class="tx_orgreferences_type">###MY_TYPE###</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tx_orgreferences_sector">###TX_ORGREFERENCES.UID_EXTERN###</td>
+                    <td class="tx_orgreferences_sector">###TX_ORGREFERENCES_SECTOR.TITLE###</td>
+                    <td class="tx_orgreferences_degree">###TX_ORGREFERENCES_DEGREE.TITLE###</td>
+                    <td class="tx_orgreferences_cat">###TX_ORGREFERENCES_CAT.TITLE###</td>
+                    <td class="static_country_zones">###STATIC_COUNTRY_ZONES.ZN_NAME_LOCAL###</td>
+                    <td class="tx_orgreferences_type">###TX_ORGREFERENCES_TYPE.TITLE###</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
+<!-- ###GROUPBYBODY### end -->
+<!-- ###GROUPBY### end -->
+            <div class="backgroundBottom">&nbsp;</div>
+          </div>
+          <!-- ###LISTVIEW### end -->
+        </div> <!-- /listarea -->
+<!-- ###TEMPLATE_LIST### end -->
+
+
+
+
+
+<!-- ###TEMPLATE_SINGLE### begin -->
+        <!-- ###SINGLEVIEW### begin -->
+<!-- ###AREA_FOR_AJAX_LIST_01### begin -->
+        <div class="###VIEW###view ###VIEW###view-###MODE###"><!-- ###SINGLEBODY### begin --><!-- ###SINGLEBODYROW### begin -->
+              <div style="float:right;">
+                ###TX_ORGREFERENCES.RATING###
+                ###SOCIALMEDIA_BOOKMARKS###
+              </div>
+              ###TX_ORGREFERENCES.LOGO###
+              ###TX_ORG_HEADQUARTERS.TITLE###
+              ###TX_ORGREFERENCES.TITLE###
+              ###TX_ORGREFERENCES.TEXT###
+              <table###MY_SUMMARY###>
+                ###MY_CAPTION###
+                <thead>
+                  <tr>
+                    <th class="tx_orgreferences_sector">###MY_UID_EXTERN###</th>
+                    <th class="tx_orgreferences_sector">###MY_SECTOR###</th>
+                    <th class="tx_orgreferences_degree">###MY_DEGREE###</th>
+                    <th class="tx_orgreferences_cat">###MY_CAT###</th>
+                    <th class="static_country_zones">###MY_STATIC_COUNTRY_ZONES###</th>
+                    <th class="tx_orgreferences_type">###MY_TYPE###</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tx_orgreferences_sector">###TX_ORGREFERENCES.UID_EXTERN###</td>
+                    <td class="tx_orgreferences_sector">###TX_ORGREFERENCES_SECTOR.TITLE###</td>
+                    <td class="tx_orgreferences_degree">###TX_ORGREFERENCES_DEGREE.TITLE###</td>
+                    <td class="tx_orgreferences_cat">###TX_ORGREFERENCES_CAT.TITLE###</td>
+                    <td class="static_country_zones">###STATIC_COUNTRY_ZONES.ZN_NAME_LOCAL###</td>
+                    <td class="tx_orgreferences_type">###TX_ORGREFERENCES_TYPE.TITLE###</td>
+                  </tr>
+                </tbody>
+              </table>
+              ###TX_ORGREFERENCES.IMAGE###
+              ###TX_ORGREFERENCES.REQUIREMENTS###
+              ###TX_ORGREFERENCES.SUBJECT###
+              ###TX_ORGREFERENCES.DOCUMENTS###
+<!-- ###AREA_FOR_AJAX_LIST_01### end -->
+          <p class="backbutton">
+            ###MY_BACK_BUTTON### | ###MY_LISTVIEW_PAGE###
+          </p>
+<!-- ###AREA_FOR_AJAX_LIST_02### begin -->
+          <!-- ###SINGLEBODYROW### end --><!-- ###SINGLEBODY### end -->
+        </div>
+<!-- ###AREA_FOR_AJAX_LIST_02### end -->
+        <!-- ###SINGLEVIEW### end -->
+<!-- ###TEMPLATE_SINGLE### end -->
+
+
+
+<!-- ###TEMPLATE_SELECTBOX_VALID### begin -->
+            <div class="sortbox">
+              <form ###CLASS### action="###URL###" method="POST">
+                <fieldset>
+                  <legend>###LEGEND###</legend>
+                  ###HIDDEN###
+                  ###SELECTBOX###
+                  <input class="button" type="submit" value="###BUTTON###" />
+                </fieldset>
+              </form>
+            </div>
+<!-- ###TEMPLATE_SELECTBOX_VALID### end -->
+
+
+
+  </body>
+</html>

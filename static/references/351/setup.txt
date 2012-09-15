@@ -1,0 +1,539 @@
+
+
+  ////////////////////////////////////////
+  //
+  // INDEX
+
+  // plugin.tx_browser_pi1
+  //    views
+  //      351: References
+
+
+
+  ////////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1
+
+
+
+plugin.tx_browser_pi1 {
+  
+  template {
+    extensions {
+      org {
+        references {
+          name      = +Org: References
+          file      = EXT:orgreferences/res/html/references/351/default.tmpl
+          csvViews  = 351
+        }
+      }
+    }
+  }
+
+  views {
+    list {
+      351 = +Org: References
+      351 {
+        name    = +Org: References
+        showUid = referencesUid
+        displayList < plugin.tx_browser_pi1.displayList
+        displayList {
+          selectBox_orderBy.display = 0
+        }
+        marker < plugin.tx_browser_pi1.marker
+        marker {
+          my_uid_extern = TEXT
+          my_uid_extern {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.uid_extern
+          }
+          my_cat = TEXT
+          my_cat {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_cat.title
+          }
+          my_degree = TEXT
+          my_degree {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_degree.title
+          }
+          my_sector = TEXT
+          my_sector {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_sector.title
+          }
+          my_static_country_zones = TEXT
+          my_static_country_zones {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.static_country_zones
+          }
+          my_type = TEXT
+          my_type {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_type.title
+          }
+          my_summary = TEXT
+          my_summary {
+            value = 
+          }
+          my_caption = TEXT
+          my_caption {
+            value = 
+          }
+          my_singleview_title = TEXT
+          my_singleview_title {
+            value   = Event
+            lang.de = Veranstaltung
+            wrap    = <div class="header01">|</div>
+            typolink {
+              parameter = {$plugin.org.pages.calendar}
+              title {
+                value = All Events
+               lang.de = Alle Veranstaltungen
+              }
+            }
+          }
+        }
+        select (
+          tx_orgreferences.title,
+          tx_orgreferences.uid_extern,
+          tx_orgreferences.short,
+          tx_orgreferences.text,
+          tx_orgreferences.rating,
+          tx_org_headquarters.title,
+          tx_orgreferences_cat.title,
+          tx_orgreferences_degree.title,
+          tx_orgreferences_sector.title,
+          tx_orgreferences_type.title,
+          static_country_zones.zn_name_local
+        )
+        csvLinkToSingleView = tx_orgreferences.title
+        static_country_zones {
+          zn_name_local = COA
+          zn_name_local {
+            10 = TEXT
+            10 {
+              if.isTrue = ###STATIC_COUNTRY_ZONES.ZN_NAME_LOCAL###
+              value     = ###STATIC_COUNTRY_ZONES.ZN_NAME_LOCAL###
+            }
+            20 = TEXT
+            20 {
+              if.isFalse  = ###STATIC_COUNTRY_ZONES.ZN_NAME_LOCAL###
+              value       = No value
+              lang.de     = Keine Angabe
+            }
+          }
+        }
+        tx_orgreferences {
+          title = TEXT
+          title {
+            stdWrap {
+              crop = 60 | ... | 1
+            }
+            wrap = <h2>|</h2>
+          }
+          short = COA
+          short {
+            10 = TEXT
+            10 {
+              value = ###TX_ORGREFERENCES.SHORT###
+              stdWrap {
+                crop      = 60 | ... | 1
+                stripHtml = 1
+              }
+              if.isTrue  = ###TX_ORGREFERENCES.SHORT###
+            }
+            20 = TEXT
+            20 {
+              value = ###TX_ORGREFERENCES.TEXT###
+              stdWrap {
+                crop      = 60 | ... | 1
+                stripHtml = 1
+              }
+              if.isFalse  = ###TX_ORGREFERENCES.SHORT###
+            }
+            wrap  = <p class="tx_orgreferences_short">|</p>
+          }
+        }
+        tx_org_headquarters {
+          title = TEXT
+          title {
+            wrap  = <p class="headquarter">|</p>
+            value = ###TX_ORG_HEADQUARTERS.TITLE###
+          }
+        }
+
+        filter {
+          static_country_zones {
+            zn_name_local < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            zn_name_local {
+              first_item {
+                stdWrap {
+                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.static_country_zones
+                }
+                option_value = -1
+              }
+              wrap {
+                item {
+                  stdWrap {
+                    crop = 30 | ... | 1
+                  }
+                }
+              }
+              wrap = <span class="selectbox selectbox_static_country_zones">|</span>
+            }
+          }
+          tx_org_headquarters {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              first_item {
+                stdWrap {
+                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_org_headquarters
+                }
+              }
+              wrap {
+                item {
+                  stdWrap {
+                    crop = 30 | ... | 1
+                  }
+                }
+              }
+              wrap = <span class="selectbox selectbox_tx_org_headquarters">|</span>
+            }
+          }
+          tx_orgreferences {
+            rating < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            rating {
+              first_item {
+                stdWrap {
+                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences.rating
+                }
+              }
+              wrap {
+                item {
+                  stdWrap {
+                    crop = 30 | ... | 1
+                  }
+                }
+              }
+              wrap = <span class="selectbox selectbox_tx_orgreferences_rating">|</span>
+            }
+          }
+          tx_orgreferences_cat {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              first_item {
+                stdWrap {
+                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_cat
+                }
+              }
+              wrap {
+                item {
+                  stdWrap {
+                    crop = 30 | ... | 1
+                  }
+                }
+              }
+              wrap = <span class="selectbox selectbox_tx_orgreferences_cat">|</span>
+            }
+          }
+          tx_orgreferences_degree {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              first_item {
+                stdWrap {
+                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_degree
+                }
+              }
+              wrap {
+                item {
+                  stdWrap {
+                    crop = 30 | ... | 1
+                  }
+                }
+              }
+              wrap = <span class="selectbox selectbox_tx_orgreferences_degree">|</span>
+            }
+          }
+          tx_orgreferences_sector {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              first_item {
+                stdWrap {
+                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_sector
+                }
+              }
+              wrap {
+                item {
+                  stdWrap {
+                    crop = 30 | ... | 1
+                  }
+                }
+              }
+              wrap = <span class="selectbox selectbox_tx_orgreferences_sector">|</span>
+            }
+          }
+        }
+      }
+    }
+    single {
+      351 = References
+      351 {
+        displaySingle < plugin.tx_browser_pi1.displaySingle
+        displaySingle {
+          image {
+            file >
+          }
+        }
+        marker < plugin.tx_browser_pi1.marker
+        marker {
+          my_cat = TEXT
+          my_cat {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_cat.title
+          }
+          my_degree = TEXT
+          my_degree {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_degree.title
+          }
+          my_sector = TEXT
+          my_sector {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_sector.title
+          }
+          my_static_country_zones = TEXT
+          my_static_country_zones {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.static_country_zones
+          }
+          my_type = TEXT
+          my_type {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_type.title
+          }
+          my_listview_page = TEXT
+          my_listview_page {
+            value = All References &raquo;
+            lang.de = Alle Referenzen &raquo; 
+            typolink {
+              parameter = {$plugin.org.pages.references}
+              title {
+                value = All references
+                lang.de = Alle Referenzen
+              }
+            }
+          }
+          my_summary = TEXT
+          my_summary {
+            value = 
+          }
+          my_caption = TEXT
+          my_caption {
+            value = 
+          }
+        }
+        select (
+          tx_orgreferences.title,
+          tx_orgreferences.uid_extern,
+          tx_orgreferences.text,
+          tx_orgreferences.location,
+          tx_orgreferences.rating,
+          tx_orgreferences.requirements,
+          tx_orgreferences.subject,
+          tx_orgreferences.length,
+          tx_orgreferences.value,
+          tx_orgreferences.tx_org_tax,
+          tx_orgreferences.url,
+          tx_orgreferences.logo,
+          tx_orgreferences.logoseo,
+          tx_orgreferences.image,
+          tx_orgreferences.imagecaption,
+          tx_orgreferences.imageseo,
+          tx_orgreferences.documents,
+          tx_org_headquarters.title,
+          tx_orgreferences_cat.title,
+          tx_orgreferences_degree.title,
+          tx_orgreferences_sector.title,
+          tx_orgreferences_type.title,
+          static_country_zones.zn_name_local
+        )
+        //orderBy = tx_org_cal_mm_calentrance.sorting, tx_org_calentrance.title
+        static_country_zones {
+          zn_name_local = COA
+          zn_name_local {
+            10 = TEXT
+            10 {
+              if.isTrue = ###STATIC_COUNTRY_ZONES.ZN_NAME_LOCAL###
+              value     = ###STATIC_COUNTRY_ZONES.ZN_NAME_LOCAL###
+            }
+            20 = TEXT
+            20 {
+              if.isFalse  = ###STATIC_COUNTRY_ZONES.ZN_NAME_LOCAL###
+              value       = No value
+              lang.de     = Keine Angabe
+            }
+          }
+        }
+        tx_orgreferences {
+          title = TEXT
+          title {
+            stdWrap {
+              crop = 60 | ... | 1
+            }
+            wrap = <h2>|</h2>
+          }
+          text = TEXT
+          text {
+            stdWrap.parseFunc < lib.parseFunc_RTE
+          }
+          requirements = COA
+          requirements {
+            10 = TEXT
+            10 {
+              value   = Requirements
+              lang.de = Voraussetzungen
+              wrap    =  <h3>|</h3>
+            }
+            20 = TEXT
+            20 {
+              value = ###TX_ORGREFERENCES.REQUIREMENTS###
+              stdWrap.parseFunc < lib.parseFunc_RTE
+            }
+            wrap = <div class="tx_orgreferences_requirements">|</div>
+          }
+          subject < .requirements
+          subject {
+            10 {
+              value   = Subject
+              lang.de = Thema
+            }
+            20 {
+              value = ###TX_ORGREFERENCES.SUBJECT###
+            }
+            wrap = <div class="tx_orgreferences_subject">|</div>
+          }
+          image < tt_content.image.20
+          image {
+            imgList.field >
+            imgList = ###TX_ORGREFERENCES.IMAGE###
+            imgPath = uploads/tx_org/
+            1 {
+              file {
+                width.field >
+                width   = 160c;
+                height  = 110c;
+              }
+              altText.field   >
+              altText         = ###TX_ORGREFERENCES.IMAGESEO###
+              titleText.field >
+              titleText       = ###TX_ORGREFERENCES.IMAGESEO###
+              imageLinkWrap {
+                enable.field >
+                enable = 1
+                width   = 1000;
+                height  = 800m;
+                //JSwindow = 0
+              }
+            }
+            layout {
+              key.field >
+                // above-left
+              key = 2
+            }
+            cols.field >
+            cols = 5
+            caption.1 {
+              field >
+              value = ###TX_ORGREFERENCES.IMAGECAPTION###
+            }
+            stdWrap {
+              prefixComment >
+              wrap          = <div class="image">|</div>
+            }
+          }
+          logo < tt_content.image.20
+          logo {
+            imgList.field >
+            imgList = ###TX_ORGREFERENCES.LOGO###
+            imgPath = uploads/tx_org/
+            1 {
+              file {
+                width.field >
+                //width   = 160c;
+                //height  = 110c;
+                height  = 110;
+              }
+              altText.field   >
+              altText         = ###TX_ORGREFERENCES.LOGOSEO###
+              titleText.field >
+              titleText       = ###TX_ORGREFERENCES.LOGOSEO###
+              imageLinkWrap {
+                enable.field >
+                enable = 1
+                width   = 1000;
+                height  = 800m;
+                //JSwindow = 0
+              }
+            }
+            layout {
+              key.field >
+                // above-left
+              key = 2
+            }
+            cols.field >
+            cols = 1
+            caption >
+            stdWrap {
+              prefixComment >
+              wrap          = <div class="logo">|</div>
+            }
+          }
+        }
+        tx_org_headquarters {
+          title = TEXT
+          title {
+            wrap  = <p class="headquarter">|</p>
+            value = ###TX_ORG_HEADQUARTERS.TITLE###
+          }
+        }
+        tx_org_location {
+          title2 = COA
+          title2 {
+            20 = TEXT
+            20 {
+              value = ###TX_ORG_LOCATION.TITLE###
+              typolink {
+                parameter = {$plugin.org.pages.location}
+                parameter {
+                  insertData = 1
+                }
+                additionalParams = &tx_browser_pi1[locationUid]=###TX_ORG_LOCATION.UID###&###CHASH###
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  _LOCAL_LANG {
+    default {
+      list_mode_351_titleTag    = Organiser: references
+      list_mode_351_keywords    = TYPO3, organiser, references
+      list_mode_351_summary     = TYPO3 Organiser: references
+      single_mode_351_titleTag  = Organiser Reference: ###TX_ORGREFERENCES.TITLE###
+      single_mode_351_keywords  = ###TX_ORGREFERENCES.KEYWORDS###
+      single_mode_351_summary   = ###TX_ORGREFERENCES.DESCRIPTION###
+    }
+    de {
+      list_mode_351_titleTag    = Organiser: Referenzen
+      list_mode_351_keywords    = TYPO3, Organiser, Referenzen
+      list_mode_351_summary     = TYPO3 Organiser: Referenzen
+      single_mode_351_titleTag  = Organiser Referenz: ###TX_ORG_CAL.TITLE###
+      single_mode_351_keywords  = ###TX_ORGREFERENCES.KEYWORDS###
+      single_mode_351_summary   = ###TX_ORGREFERENCES.DESCRIPTION###
+    }
+  }
+}
+  // plugin.tx_browser_pi1
+
+
+
+  ////////////////////////////////////////
+  //
+  // Header Comment
+
+page.config.headerComment (
+        TYPO3-Programmierung: die-netzmacher.de
+)
+  // Header Comment

@@ -1,0 +1,137 @@
+
+
+  ////////////////////////////////////////
+  //
+  // INDEX
+
+  // SEO - Search Engine Optimisation
+  //    page
+  // plugin.tx_linkhandler
+  // Header Comment
+
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // SEO - Search Engine Optimisation
+
+  //    referenceUid
+
+  // page
+[globalVar = GP:tx_browser_pi1|referenceUid > 0]
+  page {
+    config {
+      noPageTitle = 2
+    }
+    headerData {
+      20 = TEXT
+      20 {
+        data = register:browser_htmlTitleTag
+        ifEmpty {
+          field = title
+          noTrimWrap  = |Organiser Reference: ||
+        }
+        wrap = <title>|</title>
+      }
+    }
+    meta {
+      description {
+        field >
+        data = register:browser_description
+      }
+      keywords {
+        field >
+        data = register:browser_keywords
+      }
+    }
+  }
+[global]
+  // page
+  // SEO - Search Engine Optimisation
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // plugin.tx_linkhandler
+
+plugin.tx_linkhandler {
+  tx_org_reference {
+    forceLink        = 0
+    useCacheHash     = 1
+    parameter        = {$plugin.org.pages.reference}
+    additionalParams = &tx_browser_pi1[referenceUid]={field:uid}
+    additionalParams {
+      insertData = 1
+    } 
+  }
+}
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // Header Comment
+
+page.config.headerComment (
+        TYPO3-Programmierung: die-netzmacher.de
+)
+  // Header Comment
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // plugin.tx_browser
+plugin.tx_browser_pi1.views {
+	list.201 {
+		select := appendString(, tx_org_reference.title, tx_org_reference.image)
+		tx_org_cal.title.10 {
+              tx_org_reference < .tx_org_event
+              tx_org_reference {
+                value = ###TX_ORGREFERENCES.TITLE###
+              }
+		}
+	}
+	single.201 {
+		select := appendString(, tx_org_reference.title, tx_org_reference.text, tx_org_reference.image, tx_org_reference.imageseo, tx_org_reference.imagecaption)
+		tx_org_cal{
+			bodytext {
+/*
+			  tx_org_reference < .default
+			  tx_org_reference {
+			    imgList                   = ###TX_ORGREFERENCES.IMAGE###
+			    1 {
+			      file {
+			        width                 >
+			        height                >
+			      }
+			      altText                 = ###TX_ORGREFERENCES.IMAGESEO###
+			      titleText               = ###TX_ORGREFERENCES.IMAGESEO###
+			      imageLinkWrap           >
+			    }
+			    textPos                   >
+			    image_compression         >
+			    image_effects             >
+			    noRows                    >
+			    cols                      >
+			    border                    >
+			    caption.1.value           = ###TX_ORGREFERENCES.IMAGECAPTION###
+			    captionAlign              >
+			    layout                    >
+			    text {
+			      wrap      = <div class="cal_bodytext cal_bodytext_reference">|</div>
+			      20 {
+			        if.isTrue   = ###TX_ORGREFERENCES.TEXT###
+			        value       = ###TX_ORGREFERENCES.TEXT###
+			      }
+			    }
+			  }
+*/
+			}
+tx_org_reference = TEXT
+tx_org_reference.value = buuu
+		}
+	}
+}

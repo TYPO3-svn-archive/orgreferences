@@ -1,0 +1,126 @@
+
+
+  ////////////////////////////////////////
+  //
+  // INDEX
+
+  // plugin.tx_browser_pi1
+  //    views
+  //      361: References - Right Column
+
+
+
+  ////////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1
+
+plugin.tx_browser_pi1 {
+  
+  template {
+    extensions {
+      tt_news >
+      org {
+        calendar_margin {
+          name      = Org: Kalender - Rand
+          file      = EXT:orgreferences/res/html/references/361/default.tmpl
+          csvViews  = 361
+        }
+      }
+    }
+  }
+
+//  general_stdWrap >
+
+  views {
+    list {
+      361 = References (margin)
+      361 {
+        name    = Kalender - Rand
+        showUid = referencesUid
+        marker < plugin.tx_browser_pi1.marker
+        marker {
+          my_listview_title {
+            wrap = <h3><span>|</span></h3>
+            value = References
+            lang.de = Referenzen
+            typolink {
+              parameter = {$plugin.org.pages.references}
+              title {
+                value = All Events
+                lang.de = Alle Veranstaltungen
+              }
+            }
+          }
+          my_listview_page = TEXT
+          my_listview_page {
+            value = All items &raquo;
+            lang.de = Alle Veranstaltungen &raquo;
+            wrap = <p>|</p>
+            typolink {
+              parameter = {$plugin.org.pages.references}
+              title {
+                value = All items
+                lang.de = Alle Veranstaltungen
+              }
+            }
+          }
+        }
+        select (
+          tx_org_cal.title,
+          tx_org_cal.shortcut,
+          tx_org_cal.datetime,
+          tx_org_cal.uid
+        )
+        orderBy   = tx_org_cal.datetime
+        andWhere  = tx_org_cal.datetime > UNIX_TIMESTAMP()
+        csvLinkToSingleView = tx_org_cal.datetime
+        tx_org_cal {
+          datetime = COA
+          datetime {
+            wrap = <p>|</p>
+            10 = COA
+            10 {
+              10 = TEXT
+              10 {
+                value = ###TX_ORG_CAL.DATETIME###
+                strftime = %d. %b. %H:%M Uhr
+              }
+            }
+          }
+          shortcut = COA
+          shortcut {
+            wrap = <p>|</p>
+            10 = TEXT
+            10 {
+              if.isTrue = ###TX_ORG_CAL.SHORTCUT###
+              value     = ###TX_ORG_CAL.SHORTCUT###
+              wrap      (
+                <a href="{$plugin.org.pages.references}?tx_browser_pi1[referencesUid]=###TX_ORG_CAL.UID###&###CHASH###">|</a>
+              )
+            }
+            20 = TEXT
+            20 {
+              if.isFalse = ###TX_ORG_CAL.SHORTCUT###
+              value     = ###TX_ORG_CAL.TITLE###
+              wrap      (
+                <a href="{$plugin.org.pages.references}?tx_browser_pi1[referencesUid]=###TX_ORG_CAL.UID###&###CHASH###">|</a>
+              )
+            }
+          }
+        }
+      }
+    }
+    single {
+      361 = References (margin)
+      361 {
+        comment = Dieses Plugin soll nicht in der Single-Ansicht aufgerufen werden
+        template {
+          file = EXT:orgreferences/res/html/references/361/default.tmpl
+        }
+        select = tx_org_cal.title
+      }
+    }
+  }
+  
+}
+  // plugin.tx_browser_pi1
