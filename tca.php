@@ -409,7 +409,7 @@ $TCA['tx_orgreferences'] = array (
                               'tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_business, tx_orgreferences_tool,'.
                               'fe_users,tx_org_headquarters,'.
                               'tx_org_cal,tx_org_news,'.
-                              'logo, logoseo, image, imagecaption, imageseo, documents,'.
+                              'logo, logoseo, image, imagecaption, imageseo, header, headerseo, documents,'.
                               'hidden, starttime, endtime, fe_group,'.
                               'keywords, description',
   ),
@@ -547,6 +547,16 @@ $TCA['tx_orgreferences'] = array (
       'label'   => 'LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.imageseo',
       'config'  => $conf_text_30_05,
     ),
+    'header' => array (
+      'exclude' => $bool_exclude_default,
+      'label'   => 'LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.header',
+      'config'  => $conf_file_image,
+    ),
+    'headerseo' => array (
+      'exclude' => $bool_exclude_default,
+      'label'   => 'LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.headerseo',
+      'config'  => $conf_text_30_05,
+    ),
     'documents' => array (
       'exclude' => $bool_exclude_none,
       'label' => 'LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.documents',
@@ -572,7 +582,7 @@ $TCA['tx_orgreferences'] = array (
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_categories,         tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_business, tx_orgreferences_tool,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_user_headquarter,   fe_users,tx_org_headquarters,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_cal_news,           tx_org_cal,tx_org_news,'.
-                                '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_media,              logo, logoseo, image, imagecaption, imageseo, documents,'.
+                                '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_media,              logo, logoseo, image, imagecaption, imageseo, header, headerseo, documents,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_access,             hidden;;1;;,fe_group'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_seo,                keywords, description,'.
                                 ''),

@@ -22,12 +22,15 @@
       <label index="tca_phrase.description">Description for Search Engine Optimisation</label>
       <label index="tca_phrase.documents">Documents</label>
       <label index="tca_phrase.embeddedcode">Embedded Code</label>
-      <label index="tca_phrase.logo">Header</label>
+      <label index="tca_phrase.logo">Logo</label>
       <label index="tca_phrase.logoseo">Caption for Search Engines (devide it with a line break)</label>
       <label index="tca_phrase.image">Images</label>
       <label index="tca_phrase.imagecaption">Captions (devide it with a line break)</label>
       <label index="tca_phrase.imageseo">Caption for Search Engines (devide it with a line break)</label>
+      <label index="tca_phrase.header">Header</label>
+      <label index="tca_phrase.headerseo">Caption for Search Engines (devide it with a line break)</label>
       <label index="tca_phrase.keywords">Keywords for Search Engine Optimisation (CSV: comma separated values)</label>
+
       <label index="fe_users.div_tx_orgreferences">References</label>
       <label index="fe_users.tx_orgreferences">References</label>
       <label index="tx_org_cal.type.tx_orgreferences">Take it from the references table</label>
@@ -35,6 +38,7 @@
       <label index="tx_org_headquarters.div_tx_orgreferences">References</label>
       <label index="tx_org_headquarters.tx_orgreferences">Reference</label>
       <label index="tx_org_headquarters.tx_orgreferences_premium">Premium provider</label>
+
       <label index="tx_orgreferences">References</label>
       <label index="tx_orgreferences.div_references">Reference</label>
       <label index="tx_orgreferences.div_categories">Categories</label>
@@ -140,11 +144,13 @@
       <label index="tca_phrase.description">Beschreibung f<![CDATA[&uuml;]]>r Suchmaschienen</label>
       <label index="tca_phrase.documents">Dokumente</label>
       <label index="tca_phrase.embeddedcode">Eingebetteter Code</label>
-      <label index="tca_phrase.logo">Kopf-Grafik</label>
+      <label index="tca_phrase.logo">Logo</label>
       <label index="tca_phrase.logoseo">Beschreibung f<![CDATA[&uuml;]]>r Suchmaschinen (mit Zeilenumbruch trennen)</label>
       <label index="tca_phrase.image">Bilder</label>
       <label index="tca_phrase.imagecaption">Bildunterschriften (mit Zeilenumbruch trennen)</label>
       <label index="tca_phrase.imageseo">Beschreibungen f<![CDATA[&uuml;]]>r Suchmaschinen (mit Zeilenumbruch trennen)</label>
+      <label index="tca_phrase.header">Kopf-Grafik</label>
+      <label index="tca_phrase.headerseo">Beschreibung f<![CDATA[&uuml;]]>r Suchmaschinen (mit Zeilenumbruch trennen)</label>
       <label index="tca_phrase.keywords">Schl<![CDATA[&uuml;]]>sselworte f<![CDATA[&uuml;]]>r Suchmaschinen (mit Komma trennen)</label>
 
       <label index="fe_users.div_tx_orgreferences">Referenzen</label>
