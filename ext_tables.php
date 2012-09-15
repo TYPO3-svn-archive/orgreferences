@@ -600,7 +600,7 @@ $TCA['tx_orgreferences_tool'] = array (
     'hideAtCopy'        => false,
     'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
     'thumbnail'         => 'image',
-    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/type.gif',
+    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/tool.gif',
   ),
 );
   // orgreferences_tool ///////////////////////////////////////////////////////////////////
