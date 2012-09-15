@@ -52,7 +52,7 @@
       <label index="tx_orgreferences.location">Location</label>
       <label index="tx_orgreferences.longitude">Longitude</label>
       <label index="tx_orgreferences.latitude">Latitude</label>
-      <label index="tx_orgreferences.staff">Staff</label>
+      <label index="tx_orgreferences.staff">Staff (number)</label>
       <label index="tx_orgreferences.url">URL</label>
 
       <label index="tx_orgreferences.tx_orgreferences_achievement">Archievement</label>
@@ -172,7 +172,7 @@
       <label index="tx_orgreferences.location">Ort</label>
       <label index="tx_orgreferences.longitude">L<![CDATA[&auml;]]>ngengrad</label>
       <label index="tx_orgreferences.latitude">Breitengrad</label>
-      <label index="tx_orgreferences.staff">Mitarbeiter</label>
+      <label index="tx_orgreferences.staff">Anzahl der Mitarbeiter</label>
       <label index="tx_orgreferences.url">URL</label>
       
       <label index="tx_orgreferences.tx_orgreferences_achievement">Leistung</label>
