@@ -23,10 +23,7 @@ if (!defined ('TYPO3_MODE'))
   // TCA tables
   //    orgreferences
   //    orgreferences_client
-  //    orgreferences_cat
-  //    orgreferences_course
   //    orgreferences_achievement
-  //    orgreferences_focus
   //    orgreferences_business
   //    orgreferences_sector
   //    orgreferences_tool
@@ -395,10 +392,7 @@ $TCA['tx_org_headquarters']['types']['0']['showitem']   = $str_showitem;
 
   // orgreferences
   // orgreferences_client
-  // orgreferences_cat
-  // orgreferences_course
   // orgreferences_achievement
-  // orgreferences_focus
   // orgreferences_business
   // orgreferences_sector
   // orgreferences_tool
@@ -451,50 +445,6 @@ $TCA['tx_orgreferences_client'] = array (
 );
   // orgreferences_client ///////////////////////////////////////////////////////////////////
 
-  // orgreferences_cat ///////////////////////////////////////////////////////////////////
-$TCA['tx_orgreferences_cat'] = array (
-  'ctrl' => array (
-    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_cat',
-    'label'             => 'title',
-    'tstamp'            => 'tstamp',
-    'crdate'            => 'crdate',
-    'cruser_id'         => 'cruser_id',
-    'default_sortby'    => 'ORDER BY title',
-    'delete'            => 'deleted',
-    'enablecolumns'     => array (
-      'disabled'  => 'hidden',
-    ),
-    'dividers2tabs'     => true,
-    'hideAtCopy'        => false,
-    'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
-    'thumbnail'         => 'image',
-    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/cat.gif',
-  ),
-);
-  // orgreferences_cat ///////////////////////////////////////////////////////////////////
-
-  // orgreferences_course ///////////////////////////////////////////////////////////////////
-$TCA['tx_orgreferences_course'] = array (
-  'ctrl' => array (
-    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_course',
-    'label'             => 'title',
-    'tstamp'            => 'tstamp',
-    'crdate'            => 'crdate',
-    'cruser_id'         => 'cruser_id',
-    'default_sortby'    => 'ORDER BY title',
-    'delete'            => 'deleted',
-    'enablecolumns'     => array (
-      'disabled'  => 'hidden',
-    ),
-    'dividers2tabs'     => true,
-    'hideAtCopy'        => false,
-    'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
-    'thumbnail'         => 'image',
-    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/course.gif',
-  ),
-);
-  // orgreferences_course ///////////////////////////////////////////////////////////////////
-
   // orgreferences_achievement ///////////////////////////////////////////////////////////////////
 $TCA['tx_orgreferences_achievement'] = array (
   'ctrl' => array (
@@ -516,28 +466,6 @@ $TCA['tx_orgreferences_achievement'] = array (
   ),
 );
   // orgreferences_achievement ///////////////////////////////////////////////////////////////////
-
-  // orgreferences_focus ///////////////////////////////////////////////////////////////////
-$TCA['tx_orgreferences_focus'] = array (
-  'ctrl' => array (
-    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_focus',
-    'label'             => 'title',
-    'tstamp'            => 'tstamp',
-    'crdate'            => 'crdate',
-    'cruser_id'         => 'cruser_id',
-    'default_sortby'    => 'ORDER BY title',
-    'delete'            => 'deleted',
-    'enablecolumns'     => array (
-      'disabled'  => 'hidden',
-    ),
-    'dividers2tabs'     => true,
-    'hideAtCopy'        => false,
-    'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
-    'thumbnail'         => 'image',
-    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/focus.gif',
-  ),
-);
-  // orgreferences_focus ///////////////////////////////////////////////////////////////////
 
   // orgreferences_business ///////////////////////////////////////////////////////////////////
 $TCA['tx_orgreferences_business'] = array (

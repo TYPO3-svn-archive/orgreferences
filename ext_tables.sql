@@ -1,22 +1,16 @@
 # INDEX
 # -----
 # tx_orgreferences
-# tx_orgreferences_client
-# tx_orgreferences_cat
-# tx_orgreferences_course
 # tx_orgreferences_achievement
-# tx_orgreferences_focus
 # tx_orgreferences_business
+# tx_orgreferences_client
 # tx_orgreferences_sector
 # tx_orgreferences_tool
 # tx_orgreferences_mm_fe_users
 # tx_orgreferences_mm_tx_org_headquarters
-# tx_orgreferences_mm_tx_orgreferences_client
-# tx_orgreferences_mm_tx_orgreferences_cat
-# tx_orgreferences_mm_tx_orgreferences_course
 # tx_orgreferences_mm_tx_orgreferences_achievement
-# tx_orgreferences_mm_tx_orgreferences_focus
 # tx_orgreferences_mm_tx_orgreferences_business
+# tx_orgreferences_mm_tx_orgreferences_client
 # tx_orgreferences_mm_tx_orgreferences_sector
 # tx_orgreferences_mm_tx_orgreferences_tool
 # tx_orgreferences_mm_tx_org_cal
@@ -53,12 +47,9 @@ CREATE TABLE tx_orgreferences (
   rating tinytext,
   requirements mediumtext,
   subject mediumtext,
-  tx_orgreferences_cat tinytext,
-  tx_orgreferences_focus tinytext,
   tx_orgreferences_sector tinytext,
   tx_orgreferences_client tinytext,
   tx_orgreferences_achievement tinytext,
-  tx_orgreferences_course tinytext,
   tx_orgreferences_business tinytext,
   tx_orgreferences_tool tinytext,
   fe_users tinytext,
@@ -86,66 +77,6 @@ CREATE TABLE tx_orgreferences (
 
 
 #
-# Table structure for table 'tx_orgreferences_client'
-#
-CREATE TABLE tx_orgreferences_client (
-  uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
-  pid int(11) unsigned DEFAULT '0' NOT NULL,
-  tstamp int(11) unsigned DEFAULT '0' NOT NULL,
-  crdate int(11) unsigned DEFAULT '0' NOT NULL,
-  cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
-  deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
-  title tinytext,
-  tx_orgreferences tinytext,
-  hidden tinyint(4) DEFAULT '0' NOT NULL,
-  
-  PRIMARY KEY (uid),
-  KEY parent (pid)
-);
-
-
-
-#
-# Table structure for table 'tx_orgreferences_cat'
-#
-CREATE TABLE tx_orgreferences_cat (
-  uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
-  pid int(11) unsigned DEFAULT '0' NOT NULL,
-  tstamp int(11) unsigned DEFAULT '0' NOT NULL,
-  crdate int(11) unsigned DEFAULT '0' NOT NULL,
-  cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
-  deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
-  title tinytext,
-  tx_orgreferences tinytext,
-  hidden tinyint(4) DEFAULT '0' NOT NULL,
-  
-  PRIMARY KEY (uid),
-  KEY parent (pid)
-);
-
-
-
-#
-# Table structure for table 'tx_orgreferences_course'
-#
-CREATE TABLE tx_orgreferences_course (
-  uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
-  pid int(11) unsigned DEFAULT '0' NOT NULL,
-  tstamp int(11) unsigned DEFAULT '0' NOT NULL,
-  crdate int(11) unsigned DEFAULT '0' NOT NULL,
-  cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
-  deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
-  title tinytext,
-  tx_orgreferences tinytext,
-  hidden tinyint(4) DEFAULT '0' NOT NULL,
-  
-  PRIMARY KEY (uid),
-  KEY parent (pid)
-);
-
-
-
-#
 # Table structure for table 'tx_orgreferences_achievement'
 #
 CREATE TABLE tx_orgreferences_achievement (
@@ -166,9 +97,9 @@ CREATE TABLE tx_orgreferences_achievement (
 
 
 #
-# Table structure for table 'tx_orgreferences_focus'
+# Table structure for table 'tx_orgreferences_business'
 #
-CREATE TABLE tx_orgreferences_focus (
+CREATE TABLE tx_orgreferences_business (
   uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
   pid int(11) unsigned DEFAULT '0' NOT NULL,
   tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -186,9 +117,9 @@ CREATE TABLE tx_orgreferences_focus (
 
 
 #
-# Table structure for table 'tx_orgreferences_business'
+# Table structure for table 'tx_orgreferences_client'
 #
-CREATE TABLE tx_orgreferences_business (
+CREATE TABLE tx_orgreferences_client (
   uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
   pid int(11) unsigned DEFAULT '0' NOT NULL,
   tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -261,51 +192,6 @@ CREATE TABLE tx_orgreferences_mm_fe_users (
 
 
 #
-# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_client'
-#
-CREATE TABLE tx_orgreferences_mm_tx_orgreferences_client (
-  uid_local int(11) unsigned DEFAULT '0' NOT NULL,
-  uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  tablenames varchar(30) DEFAULT '' NOT NULL,
-  sorting         int(11) unsigned DEFAULT '0' NOT NULL,
-  sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  KEY uid_local (uid_local),
-  KEY uid_foreign (uid_foreign)
-);
-
-
-
-#
-# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_cat'
-#
-CREATE TABLE tx_orgreferences_mm_tx_orgreferences_cat (
-  uid_local int(11) unsigned DEFAULT '0' NOT NULL,
-  uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  tablenames varchar(30) DEFAULT '' NOT NULL,
-  sorting         int(11) unsigned DEFAULT '0' NOT NULL,
-  sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  KEY uid_local (uid_local),
-  KEY uid_foreign (uid_foreign)
-);
-
-
-
-#
-# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_course'
-#
-CREATE TABLE tx_orgreferences_mm_tx_orgreferences_course (
-  uid_local int(11) unsigned DEFAULT '0' NOT NULL,
-  uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  tablenames varchar(30) DEFAULT '' NOT NULL,
-  sorting         int(11) unsigned DEFAULT '0' NOT NULL,
-  sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  KEY uid_local (uid_local),
-  KEY uid_foreign (uid_foreign)
-);
-
-
-
-#
 # Table structure for table 'tx_orgreferences_mm_tx_orgreferences_achievement'
 #
 CREATE TABLE tx_orgreferences_mm_tx_orgreferences_achievement (
@@ -321,9 +207,24 @@ CREATE TABLE tx_orgreferences_mm_tx_orgreferences_achievement (
 
 
 #
-# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_focus'
+# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_business'
 #
-CREATE TABLE tx_orgreferences_mm_tx_orgreferences_focus (
+CREATE TABLE tx_orgreferences_mm_tx_orgreferences_business (
+  uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+  uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+  tablenames varchar(30) DEFAULT '' NOT NULL,
+  sorting         int(11) unsigned DEFAULT '0' NOT NULL,
+  sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+  KEY uid_local (uid_local),
+  KEY uid_foreign (uid_foreign)
+);
+
+
+
+#
+# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_client'
+#
+CREATE TABLE tx_orgreferences_mm_tx_orgreferences_client (
   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
   tablenames varchar(30) DEFAULT '' NOT NULL,
@@ -339,21 +240,6 @@ CREATE TABLE tx_orgreferences_mm_tx_orgreferences_focus (
 # Table structure for table 'tx_orgreferences_mm_tx_org_headquarters'
 #
 CREATE TABLE tx_orgreferences_mm_tx_org_headquarters (
-  uid_local int(11) unsigned DEFAULT '0' NOT NULL,
-  uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  tablenames varchar(30) DEFAULT '' NOT NULL,
-  sorting         int(11) unsigned DEFAULT '0' NOT NULL,
-  sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-  KEY uid_local (uid_local),
-  KEY uid_foreign (uid_foreign)
-);
-
-
-
-#
-# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_business'
-#
-CREATE TABLE tx_orgreferences_mm_tx_orgreferences_business (
   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
   tablenames varchar(30) DEFAULT '' NOT NULL,
