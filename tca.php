@@ -262,7 +262,7 @@ switch($confArr['full_wizardSupport'])
 
   $conf_file_document = array (
     'type'          => 'group',
-    'internal_tool' => 'file',
+    'internal_type' => 'file',
     'allowed'       => '',
     'disallowed'    => 'php,php3',
     'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
@@ -274,7 +274,7 @@ switch($confArr['full_wizardSupport'])
 
   $conf_file_image = array (
     'type'          => 'group',
-    'internal_tool' => 'file',
+    'internal_type' => 'file',
     'allowed'       => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
     'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
     'uploadfolder'  => 'uploads/tx_orgreferences',
