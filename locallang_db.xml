@@ -17,7 +17,7 @@
       <label index="filter_phrase.tx_orgreferences_course">All course types</label>
       <label index="filter_phrase.tx_orgreferences_degree">All degrees</label>
       <label index="filter_phrase.tx_orgreferences_focus">Focus</label>
-      <label index="filter_phrase.tx_orgreferences_riskcycle">Content risk cycle</label>
+      <label index="filter_phrase.tx_orgreferences_business">Business segment</label>
       <label index="filter_phrase.tx_orgreferences_sector">All sectors</label>
       <label index="filter_phrase.tx_orgreferences_type">All types</label>
       <label index="filter_phrase.tx_orgreferences.rating">Ratings</label>
@@ -72,7 +72,7 @@
       <label index="tx_orgreferences.tx_orgreferences_course">Course type</label>
       <label index="tx_orgreferences.tx_orgreferences_degree">Degree</label>
       <label index="tx_orgreferences.tx_orgreferences_focus">Focus</label>
-      <label index="tx_orgreferences.tx_orgreferences_riskcycle">Content risk cycle</label>
+      <label index="tx_orgreferences.tx_orgreferences_business">Business segment</label>
       <label index="tx_orgreferences.tx_orgreferences_sector">Sector</label>
       <label index="tx_orgreferences.tx_orgreferences_type">Type</label>
 
@@ -106,11 +106,11 @@
       <label index="tx_orgreferences_focus.div_access">Access</label>
       <label index="tx_orgreferences_focus.title">Focus</label>
       <label index="tx_orgreferences_focus.tx_orgreferences">References</label>
-      <label index="tx_orgreferences_riskcycle">References: content risk cycles</label>
-      <label index="tx_orgreferences_riskcycle.div_riskcycle">Content risk cycle</label>
-      <label index="tx_orgreferences_riskcycle.div_access">Access</label>
-      <label index="tx_orgreferences_riskcycle.title">Content risk cycle</label>
-      <label index="tx_orgreferences_riskcycle.tx_orgreferences">References</label>
+      <label index="tx_orgreferences_business">References: business segments</label>
+      <label index="tx_orgreferences_business.div_business">Business segment</label>
+      <label index="tx_orgreferences_business.div_access">Access</label>
+      <label index="tx_orgreferences_business.title">Business segment</label>
+      <label index="tx_orgreferences_business.tx_orgreferences">References</label>
       <label index="tx_orgreferences_sector">References: sectors</label>
       <label index="tx_orgreferences_sector.div_sector">Sector</label>
       <label index="tx_orgreferences_sector.div_access">Access</label>
@@ -152,9 +152,9 @@
       <label index="wizard.references_focus.add">Add a new focus category</label>
       <label index="wizard.references_focus.edit"> Edit the current focus category</label>
       <label index="wizard.references_focus.list">Display the focus category table</label>
-      <label index="wizard.references_riskcycle.add">Add a new category for content risk cycle</label>
-      <label index="wizard.references_riskcycle.edit"> Edit the current category of the content risk cycle</label>
-      <label index="wizard.references_riskcycle.list">Display the category table with the content risk cycles</label>
+      <label index="wizard.references_business.add">Add a new category for business segment</label>
+      <label index="wizard.references_business.edit"> Edit the current category of the business segment</label>
+      <label index="wizard.references_business.list">Display the category table with the business segments</label>
       <label index="wizard.references_sector.add">Add a new sector</label>
       <label index="wizard.references_sector.edit"> Edit the current sector</label>
       <label index="wizard.references_sector.list">Display the sector table</label>
@@ -175,7 +175,7 @@
       <label index="filter_phrase.tx_orgreferences_course">Alle Kurs-Typen</label>
       <label index="filter_phrase.tx_orgreferences_degree">Alle Abschlüsse</label>
       <label index="filter_phrase.tx_orgreferences_focus">Alle Schwerpunkte</label>
-      <label index="filter_phrase.tx_orgreferences_riskcycle">Content risk Cycle</label>
+      <label index="filter_phrase.tx_orgreferences_business">Geschäftsfeld</label>
       <label index="filter_phrase.tx_orgreferences_sector">Alle Branchen</label>
       <label index="filter_phrase.tx_orgreferences_type">Alle Typen</label>
       <label index="filter_phrase.tx_orgreferences.rating">Bewertungen</label>
@@ -230,7 +230,7 @@
       <label index="tx_orgreferences.tx_orgreferences_course">Kurs-Typ</label>
       <label index="tx_orgreferences.tx_orgreferences_degree">Abschluss</label>
       <label index="tx_orgreferences.tx_orgreferences_focus">Schwerpunktthema</label>
-      <label index="tx_orgreferences.tx_orgreferences_riskcycle">Content Risk Cycle</label>
+      <label index="tx_orgreferences.tx_orgreferences_business">Geschäftsfeld</label>
       <label index="tx_orgreferences.tx_orgreferences_sector">Branche</label>
       <label index="tx_orgreferences.tx_orgreferences_type">Typ</label>
       
@@ -264,11 +264,11 @@
       <label index="tx_orgreferences_focus.div_access">Steuerung</label>
       <label index="tx_orgreferences_focus.title">Schwerpunkthema</label>
       <label index="tx_orgreferences_focus.tx_orgreferences">Referenzen</label>
-      <label index="tx_orgreferences_riskcycle">Referenzen: Content Risk Cycle</label>
-      <label index="tx_orgreferences_riskcycle.div_riskcycle">Content Risk Cycle</label>
-      <label index="tx_orgreferences_riskcycle.div_access">Steuerung</label>
-      <label index="tx_orgreferences_riskcycle.title">Content Risk Cycle</label>
-      <label index="tx_orgreferences_riskcycle.tx_orgreferences">Referenzen</label>
+      <label index="tx_orgreferences_business">Referenzen: Geschäftsfeld</label>
+      <label index="tx_orgreferences_business.div_business">Geschäftsfeld</label>
+      <label index="tx_orgreferences_business.div_access">Steuerung</label>
+      <label index="tx_orgreferences_business.title">Geschäftsfeld</label>
+      <label index="tx_orgreferences_business.tx_orgreferences">Referenzen</label>
       <label index="tx_orgreferences_sector">Referenzen: Branchen</label>
       <label index="tx_orgreferences_sector.div_sector">Bracnhe</label>
       <label index="tx_orgreferences_sector.div_access">Steuerung</label>
@@ -310,9 +310,9 @@
       <label index="wizard.references_focus.add">Neues Schwerpunktthema anlegen</label>
       <label index="wizard.references_focus.edit"> Ausgewähltes Schwerpunktthema bearbeiten</label>
       <label index="wizard.references_focus.list">Tabelle mit Schwerpunktthemen ansehen</label>
-      <label index="wizard.references_riskcycle.add">Neue Content Risk Cycle anlegen</label>
-      <label index="wizard.references_riskcycle.edit"> Ausgewählten Content Risk Cycle bearbeiten</label>
-      <label index="wizard.references_riskcycle.list">Tabelle mit Content Risk Cyclen ansehen</label>
+      <label index="wizard.references_business.add">Neues Geschäftsfeld anlegen</label>
+      <label index="wizard.references_business.edit"> Ausgewähltes Geschäftsfeld bearbeiten</label>
+      <label index="wizard.references_business.list">Tabelle mit Geschäftsfeld ansehen</label>
       <label index="wizard.references_sector.add">Neue Branche anlegen</label>
       <label index="wizard.references_sector.edit"> Ausgewählte Branche bearbeiten</label>
       <label index="wizard.references_sector.list">Tabelle mit Branchen ansehen</label>

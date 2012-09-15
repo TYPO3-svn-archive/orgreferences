@@ -27,7 +27,7 @@ if (!defined ('TYPO3_MODE'))
   //    orgreferences_course
   //    orgreferences_degree
   //    orgreferences_focus
-  //    orgreferences_riskcycle
+  //    orgreferences_business
   //    orgreferences_sector
   //    orgreferences_type
 
@@ -399,7 +399,7 @@ $TCA['tx_org_headquarters']['types']['0']['showitem']   = $str_showitem;
   // orgreferences_course
   // orgreferences_degree
   // orgreferences_focus
-  // orgreferences_riskcycle
+  // orgreferences_business
   // orgreferences_sector
   // orgreferences_type
 
@@ -539,10 +539,10 @@ $TCA['tx_orgreferences_focus'] = array (
 );
   // orgreferences_focus ///////////////////////////////////////////////////////////////////
 
-  // orgreferences_riskcycle ///////////////////////////////////////////////////////////////////
-$TCA['tx_orgreferences_riskcycle'] = array (
+  // orgreferences_business ///////////////////////////////////////////////////////////////////
+$TCA['tx_orgreferences_business'] = array (
   'ctrl' => array (
-    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_riskcycle',
+    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_business',
     'label'             => 'title',
     'tstamp'            => 'tstamp',
     'crdate'            => 'crdate',
@@ -556,10 +556,10 @@ $TCA['tx_orgreferences_riskcycle'] = array (
     'hideAtCopy'        => false,
     'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
     'thumbnail'         => 'image',
-    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/riskcycle.gif',
+    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/business.gif',
   ),
 );
-  // orgreferences_riskcycle ///////////////////////////////////////////////////////////////////
+  // orgreferences_business ///////////////////////////////////////////////////////////////////
 
   // orgreferences_sector ///////////////////////////////////////////////////////////////////
 $TCA['tx_orgreferences_sector'] = array (
