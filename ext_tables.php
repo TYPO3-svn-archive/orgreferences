@@ -138,16 +138,16 @@ switch(true) {
   case($llStatic == 'de'):
       // German
     $TCA['pages']['columns']['module']['config']['items'][] =
-       array('Org: Referenzen', 'org_wrkshp', t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/references.gif');
+       array('Org: Referenzen', 'org_rfrncs', t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/references.gif');
     break;
   default:
       // English
     $TCA['pages']['columns']['module']['config']['items'][] =
-       array('Org: References', 'org_wrkshp', t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/references.gif');
+       array('Org: References', 'org_rfrncs', t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/references.gif');
 }
   // Case $llStatic
 
-$ICON_TYPES['org_wrkshp']   = array('icon' => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/references.gif');
+$ICON_TYPES['org_rfrncs']   = array('icon' => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/references.gif');
 
   // Add pagetree icons
 
