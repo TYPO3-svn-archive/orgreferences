@@ -761,12 +761,14 @@ $TCA['tx_orgreferences']['columns']['tx_org_headquarters']['label'] =
   'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.tx_org_headquarters';
 //$TCA['tx_orgreferences']['columns']['tx_org_headquarters']['config']['eval'] =
 //  'required';
-$TCA['tx_orgreferences']['columns']['tx_org_headquarters']['config']['size'] =
-  1;
+//$TCA['tx_orgreferences']['columns']['tx_org_headquarters']['config']['size'] =
+//  1;
 ////$TCA['tx_orgreferences']['columns']['tx_org_headquarters']['config']['items'][] =
 ////  array('', 0);
 //$TCA['tx_orgreferences']['columns']['tx_org_headquarters']['config']['maxitems'] =
 //  10;
+$TCA['tx_orgreferences']['columns']['tx_org_headquarters']['config']['maxitems'] =
+  1;
 //$TCA['tx_orgreferences']['columns']['tx_org_headquarters']['config']['minitems'] =
 //  1;
 $TCA['tx_orgreferences']['columns']['tx_org_headquarters']['config']['MM'] =
