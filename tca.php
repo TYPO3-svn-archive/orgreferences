@@ -492,7 +492,11 @@ $TCA['tx_orgreferences'] = array (
     'staff'  => array (
       'exclude'   => $bool_exclude_default,
       'label'     => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.staff',
-      'config'    => $conf_input_80_trim,
+      'config'    => array (
+        'type' => 'input',
+        'size' => '5',
+        'eval' => 'trim,int'
+      ),
     ),
     'url' => array (
       'exclude' => $bool_exclude_default,
