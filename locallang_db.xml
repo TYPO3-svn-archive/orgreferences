@@ -22,7 +22,7 @@
       <label index="tca_phrase.description">Description for Search Engine Optimisation</label>
       <label index="tca_phrase.documents">Documents</label>
       <label index="tca_phrase.embeddedcode">Embedded Code</label>
-      <label index="tca_phrase.logo">Logo</label>
+      <label index="tca_phrase.logo">Header</label>
       <label index="tca_phrase.logoseo">Caption for Search Engines (devide it with a line break)</label>
       <label index="tca_phrase.image">Images</label>
       <label index="tca_phrase.imagecaption">Captions (devide it with a line break)</label>
@@ -137,7 +137,7 @@
       <label index="tca_phrase.description">Beschreibung f<![CDATA[&uuml;]]>r Suchmaschienen</label>
       <label index="tca_phrase.documents">Dokumente</label>
       <label index="tca_phrase.embeddedcode">Eingebetteter Code</label>
-      <label index="tca_phrase.logo">Logo</label>
+      <label index="tca_phrase.logo">Kopf-Grafik</label>
       <label index="tca_phrase.logoseo">Beschreibung f<![CDATA[&uuml;]]>r Suchmaschinen (mit Zeilenumbruch trennen)</label>
       <label index="tca_phrase.image">Bilder</label>
       <label index="tca_phrase.imagecaption">Bildunterschriften (mit Zeilenumbruch trennen)</label>
