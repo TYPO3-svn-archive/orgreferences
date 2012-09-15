@@ -496,6 +496,7 @@ $TCA['tx_orgreferences'] = array (
         'type'  => 'input',
         'size'  => '5',
         'max'   => '5',
+        'checkbox'  => '1',
         'eval'  => 'trim,int',
         'range' => array(
           'lower' => 1,
