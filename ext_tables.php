@@ -29,7 +29,7 @@ if (!defined ('TYPO3_MODE'))
   //    orgreferences_focus
   //    orgreferences_business
   //    orgreferences_sector
-  //    orgreferences_type
+  //    orgreferences_tool
 
 
 
@@ -147,7 +147,7 @@ switch(true) {
 }
   // Case $llStatic
 
-$ICON_TYPES['org_rfrncs']   = array('icon' => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/references.gif');
+$ICON_TOOLS['org_rfrncs']   = array('icon' => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/references.gif');
 
   // Add pagetree icons
 
@@ -401,7 +401,7 @@ $TCA['tx_org_headquarters']['types']['0']['showitem']   = $str_showitem;
   // orgreferences_focus
   // orgreferences_business
   // orgreferences_sector
-  // orgreferences_type
+  // orgreferences_tool
 
   // orgreferences ////////////////////////////////////////////////////////////
 $TCA['tx_orgreferences'] = array (
@@ -583,10 +583,10 @@ $TCA['tx_orgreferences_sector'] = array (
 );
   // orgreferences_sector ///////////////////////////////////////////////////////////////////
 
-  // orgreferences_type ///////////////////////////////////////////////////////////////////
-$TCA['tx_orgreferences_type'] = array (
+  // orgreferences_tool ///////////////////////////////////////////////////////////////////
+$TCA['tx_orgreferences_tool'] = array (
   'ctrl' => array (
-    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_type',
+    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_tool',
     'label'             => 'title',
     'tstamp'            => 'tstamp',
     'crdate'            => 'crdate',
@@ -603,7 +603,7 @@ $TCA['tx_orgreferences_type'] = array (
     'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/type.gif',
   ),
 );
-  // orgreferences_type ///////////////////////////////////////////////////////////////////
+  // orgreferences_tool ///////////////////////////////////////////////////////////////////
 
 
   // TCA tables //////////////////////////////////////////////////////////////

@@ -9,7 +9,7 @@ mod {
       tx_orgreferences_focus,
       tx_orgreferences_business, 
       tx_orgreferences_sector, 
-      tx_orgreferences_type
+      tx_orgreferences_tool
     )
   }
 }

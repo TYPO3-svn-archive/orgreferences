@@ -19,7 +19,7 @@
       <label index="filter_phrase.tx_orgreferences_focus">Focus</label>
       <label index="filter_phrase.tx_orgreferences_business">Business segment</label>
       <label index="filter_phrase.tx_orgreferences_sector">All sectors</label>
-      <label index="filter_phrase.tx_orgreferences_type">All types</label>
+      <label index="filter_phrase.tx_orgreferences_tool">All tools</label>
       <label index="filter_phrase.tx_orgreferences.rating">Ratings</label>
       
       <label index="filter_phrase.references">Reference</label>
@@ -74,7 +74,7 @@
       <label index="tx_orgreferences.tx_orgreferences_focus">Focus</label>
       <label index="tx_orgreferences.tx_orgreferences_business">Business segment</label>
       <label index="tx_orgreferences.tx_orgreferences_sector">Sector</label>
-      <label index="tx_orgreferences.tx_orgreferences_type">Type</label>
+      <label index="tx_orgreferences.tx_orgreferences_tool">Tool</label>
 
       <label index="tx_orgreferences.fe_users">Contact person</label>
       <label index="tx_orgreferences.tx_org_headquarters">Provider</label>
@@ -116,11 +116,11 @@
       <label index="tx_orgreferences_sector.div_access">Access</label>
       <label index="tx_orgreferences_sector.title">Sector</label>
       <label index="tx_orgreferences_sector.tx_orgreferences">References</label>
-      <label index="tx_orgreferences_type">References: types</label>
-      <label index="tx_orgreferences_type.div_type">Type</label>
-      <label index="tx_orgreferences_type.div_access">Access</label>
-      <label index="tx_orgreferences_type.title">Type</label>
-      <label index="tx_orgreferences_type.tx_orgreferences">References</label>
+      <label index="tx_orgreferences_tool">References: tools</label>
+      <label index="tx_orgreferences_tool.div_tool">Tool</label>
+      <label index="tx_orgreferences_tool.div_access">Access</label>
+      <label index="tx_orgreferences_tool.title">Tool</label>
+      <label index="tx_orgreferences_tool.tx_orgreferences">References</label>
 
       <label index="wizard.fe_user.add">Add a new frontend user</label>
       <label index="wizard.fe_user.edit"> Edit the current frontend user</label>
@@ -158,16 +158,16 @@
       <label index="wizard.references_sector.add">Add a new sector</label>
       <label index="wizard.references_sector.edit"> Edit the current sector</label>
       <label index="wizard.references_sector.list">Display the sector table</label>
-      <label index="wizard.references_type.add">Add a new type</label>
-      <label index="wizard.references_type.edit"> Edit the current type</label>
-      <label index="wizard.references_type.list">Display the type table</label>
+      <label index="wizard.references_tool.add">Add a new tool</label>
+      <label index="wizard.references_tool.edit"> Edit the current tool</label>
+      <label index="wizard.references_tool.list">Display the tools table</label>
     </languageKey>
     <languageKey index="de" type="array">
       <label index="dummy.language">de</label>
 
       <label index="filter_phrase.all">Alle</label>
       <label index="filter_phrase.static_languages">Alle Sprachen</label>
-      <label index="filter_phrase.static_country_zones">Alle Bundesländer</label>
+      <label index="filter_phrase.static_country_zones">Alle Bundesl<![CDATA[&auml;]]>nder</label>
       <label index="filter_phrase.tx_org_headquarters">Alle Anbieter</label>
       <label index="filter_phrase.tx_orgreferences">Alle Referenzen</label>
       <label index="filter_phrase.tx_orgreferences_client">Alle Kunden</label>
@@ -175,20 +175,20 @@
       <label index="filter_phrase.tx_orgreferences_course">Alle Kurs-Typen</label>
       <label index="filter_phrase.tx_orgreferences_achievement">Alle Leistungen</label>
       <label index="filter_phrase.tx_orgreferences_focus">Alle Schwerpunkte</label>
-      <label index="filter_phrase.tx_orgreferences_business">Geschäftsfeld</label>
+      <label index="filter_phrase.tx_orgreferences_business">Gesch<![CDATA[&auml;]]>ftsfeld</label>
       <label index="filter_phrase.tx_orgreferences_sector">Alle Branchen</label>
-      <label index="filter_phrase.tx_orgreferences_type">Alle Typen</label>
+      <label index="filter_phrase.tx_orgreferences_tool">Alle Techniken</label>
       <label index="filter_phrase.tx_orgreferences.rating">Bewertungen</label>
 
-      <label index="tca_phrase.description">Beschreibung für Suchmaschienen</label>
+      <label index="tca_phrase.description">Beschreibung f<![CDATA[&uuml;]]>r Suchmaschienen</label>
       <label index="tca_phrase.documents">Dokumente</label>
       <label index="tca_phrase.embeddedcode">Eingebetteter Code</label>
       <label index="tca_phrase.logo">Logo</label>
-      <label index="tca_phrase.logoseo">Beschreibung für Suchmaschinen (mit Zeilenumbruch trennen)</label>
+      <label index="tca_phrase.logoseo">Beschreibung f<![CDATA[&uuml;]]>r Suchmaschinen (mit Zeilenumbruch trennen)</label>
       <label index="tca_phrase.image">Bilder</label>
       <label index="tca_phrase.imagecaption">Bildunterschriften (mit Zeilenumbruch trennen)</label>
-      <label index="tca_phrase.imageseo">Beschreibungen für Suchmaschinen (mit Zeilenumbruch trennen)</label>
-      <label index="tca_phrase.keywords">Schlüsselworte für Suchmaschinen (mit Komma trennen)</label>
+      <label index="tca_phrase.imageseo">Beschreibungen f<![CDATA[&uuml;]]>r Suchmaschinen (mit Zeilenumbruch trennen)</label>
+      <label index="tca_phrase.keywords">Schl<![CDATA[&uuml;]]>sselworte f<![CDATA[&uuml;]]>r Suchmaschinen (mit Komma trennen)</label>
 
       <label index="fe_users.div_tx_orgreferences">Referenzen</label>
       <label index="fe_users.tx_orgreferences">Referenzen</label>
@@ -216,8 +216,8 @@
       <label index="tx_orgreferences.static_countries">Land</label>
       <label index="tx_orgreferences.static_country_zones">Bundesland, Kanton</label>
       <label index="tx_orgreferences.location">Ort</label>
-      <label index="tx_orgreferences.length">Länge</label>
-      <label index="tx_orgreferences.recurrence">Häufigkeit</label>
+      <label index="tx_orgreferences.length">L<![CDATA[&auml;]]>nge</label>
+      <label index="tx_orgreferences.recurrence">H<![CDATA[&auml;]]>ufigkeit</label>
       <label index="tx_orgreferences.value">Kosten</label>
       <label index="tx_orgreferences.tx_org_tax">inkl. MWSt.</label>
       <label index="tx_orgreferences.url">URL</label>
@@ -230,9 +230,9 @@
       <label index="tx_orgreferences.tx_orgreferences_course">Kurs-Typ</label>
       <label index="tx_orgreferences.tx_orgreferences_achievement">Leistung</label>
       <label index="tx_orgreferences.tx_orgreferences_focus">Schwerpunktthema</label>
-      <label index="tx_orgreferences.tx_orgreferences_business">Geschäftsfeld</label>
+      <label index="tx_orgreferences.tx_orgreferences_business">Gesch<![CDATA[&auml;]]>ftsfeld</label>
       <label index="tx_orgreferences.tx_orgreferences_sector">Branche</label>
-      <label index="tx_orgreferences.tx_orgreferences_type">Typ</label>
+      <label index="tx_orgreferences.tx_orgreferences_tool">Technik</label>
       
       <label index="tx_orgreferences.fe_users">Ansprechpartner</label>
       <label index="tx_orgreferences.tx_org_headquarters">Anbieter</label>
@@ -264,61 +264,61 @@
       <label index="tx_orgreferences_focus.div_access">Steuerung</label>
       <label index="tx_orgreferences_focus.title">Schwerpunkthema</label>
       <label index="tx_orgreferences_focus.tx_orgreferences">Referenzen</label>
-      <label index="tx_orgreferences_business">Referenzen: Geschäftsfeld</label>
-      <label index="tx_orgreferences_business.div_business">Geschäftsfeld</label>
+      <label index="tx_orgreferences_business">Referenzen: Gesch<![CDATA[&auml;]]>ftsfeld</label>
+      <label index="tx_orgreferences_business.div_business">Gesch<![CDATA[&auml;]]>ftsfeld</label>
       <label index="tx_orgreferences_business.div_access">Steuerung</label>
-      <label index="tx_orgreferences_business.title">Geschäftsfeld</label>
+      <label index="tx_orgreferences_business.title">Gesch<![CDATA[&auml;]]>ftsfeld</label>
       <label index="tx_orgreferences_business.tx_orgreferences">Referenzen</label>
       <label index="tx_orgreferences_sector">Referenzen: Branchen</label>
       <label index="tx_orgreferences_sector.div_sector">Bracnhe</label>
       <label index="tx_orgreferences_sector.div_access">Steuerung</label>
       <label index="tx_orgreferences_sector.title">Branche</label>
       <label index="tx_orgreferences_sector.tx_orgreferences">Referenzen</label>
-      <label index="tx_orgreferences_type">Referenzen: Typen</label>
-      <label index="tx_orgreferences_type.div_type">Typ</label>
-      <label index="tx_orgreferences_type.div_access">Steuerung</label>
-      <label index="tx_orgreferences_type.title">Typ</label>
-      <label index="tx_orgreferences_type.tx_orgreferences">Referenzen</label>
+      <label index="tx_orgreferences_tool">Referenzen: Technik</label>
+      <label index="tx_orgreferences_tool.div_tool">Technik</label>
+      <label index="tx_orgreferences_tool.div_access">Steuerung</label>
+      <label index="tx_orgreferences_tool.title">Technik</label>
+      <label index="tx_orgreferences_tool.tx_orgreferences">Referenzen</label>
 
       <label index="wizard.fe_user.add">Neuen Benutzer anlegen</label>
-      <label index="wizard.fe_user.edit"> Ausgewählten Benutzer bearbeiten</label>
+      <label index="wizard.fe_user.edit"> Ausgew<![CDATA[&auml;]]>hlten Benutzer bearbeiten</label>
       <label index="wizard.fe_user.list">Tabelle mit Benutzer ansehen</label>
       <label index="wizard.tx_org_cal.add">Neue Termin anlegen</label>
-      <label index="wizard.tx_org_cal.edit"> Ausgewählten Termin bearbeiten</label>
+      <label index="wizard.tx_org_cal.edit"> Ausgew<![CDATA[&auml;]]>hlten Termin bearbeiten</label>
       <label index="wizard.tx_org_cal.list">Tabelle mit Terminen anzeigen</label>
       <label index="wizard.tx_org_headquarters.add">Neuen Anbieter anlegen</label>
-      <label index="wizard.tx_org_headquarters.edit"> Ausgewählten Anbieter bearbeiten</label>
+      <label index="wizard.tx_org_headquarters.edit"> Ausgew<![CDATA[&auml;]]>hlten Anbieter bearbeiten</label>
       <label index="wizard.tx_org_headquarters.list">Tabelle mit Anbietern ansehen</label>
       <label index="wizard.tx_org_news.add">Neue Nachricht anlegen</label>
-      <label index="wizard.tx_org_news.edit"> Ausgewählte Nachricht bearbeiten</label>
+      <label index="wizard.tx_org_news.edit"> Ausgew<![CDATA[&auml;]]>hlte Nachricht bearbeiten</label>
       <label index="wizard.tx_org_news.list">Tabelle mit Nachrichten ansehen</label>
       <label index="wizard.references.add">Neue Referenz anlegen</label>
-      <label index="wizard.references.edit"> Ausgewählte Referenz bearbeiten</label>
+      <label index="wizard.references.edit"> Ausgew<![CDATA[&auml;]]>hlte Referenz bearbeiten</label>
       <label index="wizard.references.list">Tabelle mit Referenzen ansehen</label>
       <label index="wizard.references_client.add">Neuen Kunden anlegen</label>
-      <label index="wizard.references_client.edit"> Ausgewählten Kunden bearbeiten</label>
+      <label index="wizard.references_client.edit"> Ausgew<![CDATA[&auml;]]>hlten Kunden bearbeiten</label>
       <label index="wizard.references_client.list">Tabelle mit Kunden ansehen</label>
       <label index="wizard.references_cat.add">Neue Kategorie anlegen</label>
-      <label index="wizard.references_cat.edit"> Ausgewählte Kategorie bearbeiten</label>
+      <label index="wizard.references_cat.edit"> Ausgew<![CDATA[&auml;]]>hlte Kategorie bearbeiten</label>
       <label index="wizard.references_cat.list">Tabelle mit Kategorien ansehen</label>
       <label index="wizard.references_course.add">Neuen Kurs-Typ anlegen</label>
-      <label index="wizard.references_course.edit"> Ausgewählten Kurs-Typ bearbeiten</label>
+      <label index="wizard.references_course.edit"> Ausgew<![CDATA[&auml;]]>hlten Kurs-Typ bearbeiten</label>
       <label index="wizard.references_course.list">Tabelle mit Kurs-Typen ansehen</label>
       <label index="wizard.references_achievement.add">Neue Leistung anlegen</label>
-      <label index="wizard.references_achievement.edit"> Ausgewählte Leistung bearbeiten</label>
+      <label index="wizard.references_achievement.edit"> Ausgew<![CDATA[&auml;]]>hlte Leistung bearbeiten</label>
       <label index="wizard.references_achievement.list">Tabelle mit Leistungen ansehen</label>
       <label index="wizard.references_focus.add">Neues Schwerpunktthema anlegen</label>
-      <label index="wizard.references_focus.edit"> Ausgewähltes Schwerpunktthema bearbeiten</label>
+      <label index="wizard.references_focus.edit"> Ausgew<![CDATA[&auml;]]>hltes Schwerpunktthema bearbeiten</label>
       <label index="wizard.references_focus.list">Tabelle mit Schwerpunktthemen ansehen</label>
-      <label index="wizard.references_business.add">Neues Geschäftsfeld anlegen</label>
-      <label index="wizard.references_business.edit"> Ausgewähltes Geschäftsfeld bearbeiten</label>
-      <label index="wizard.references_business.list">Tabelle mit Geschäftsfeld ansehen</label>
+      <label index="wizard.references_business.add">Neues Gesch<![CDATA[&auml;]]>ftsfeld anlegen</label>
+      <label index="wizard.references_business.edit"> Ausgew<![CDATA[&auml;]]>hltes Gesch<![CDATA[&auml;]]>ftsfeld bearbeiten</label>
+      <label index="wizard.references_business.list">Tabelle mit Gesch<![CDATA[&auml;]]>ftsfeld ansehen</label>
       <label index="wizard.references_sector.add">Neue Branche anlegen</label>
-      <label index="wizard.references_sector.edit"> Ausgewählte Branche bearbeiten</label>
+      <label index="wizard.references_sector.edit"> Ausgew<![CDATA[&auml;]]>hlte Branche bearbeiten</label>
       <label index="wizard.references_sector.list">Tabelle mit Branchen ansehen</label>
-      <label index="wizard.references_type.add">Neuen Typ anlegen</label>
-      <label index="wizard.references_type.edit"> Ausgewählten Typ bearbeiten</label>
-      <label index="wizard.references_type.list">Tabelle mit Typen ansehen</label>
+      <label index="wizard.references_tool.add">Neue Technik anlegen</label>
+      <label index="wizard.references_tool.edit"> Ausgew<![CDATA[&auml;]]>hlte Technik bearbeiten</label>
+      <label index="wizard.references_tool.list">Tabelle mit Technik ansehen</label>
     </languageKey>
   </data>
 </T3locallang>

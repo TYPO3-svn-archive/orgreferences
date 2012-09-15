@@ -26,7 +26,7 @@ if (!defined ('TYPO3_MODE'))
   //   tx_orgreferences_focus
   //   tx_orgreferences_business
   //   tx_orgreferences_sector
-  //   tx_orgreferences_type
+  //   tx_orgreferences_tool
 
 
 
@@ -264,7 +264,7 @@ switch($confArr['full_wizardSupport'])
 
   $conf_file_document = array (
     'type'          => 'group',
-    'internal_type' => 'file',
+    'internal_tool' => 'file',
     'allowed'       => '',
     'disallowed'    => 'php,php3',
     'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
@@ -276,7 +276,7 @@ switch($confArr['full_wizardSupport'])
 
   $conf_file_image = array (
     'type'          => 'group',
-    'internal_type' => 'file',
+    'internal_tool' => 'file',
     'allowed'       => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
     'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
     'uploadfolder'  => 'uploads/tx_org',
@@ -401,7 +401,7 @@ $TCA['tx_orgreferences'] = array (
     'showRecordFieldList' =>  'title, uid_extern, short, text, static_languages, static_countries, static_country_zones, location, length, recurrence, value, tx_org_tax, url, rating,'.
                               'requirements,'.
                               'subject,'.
-                              'tx_orgreferences_cat, tx_orgreferences_focus, tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_course, tx_orgreferences_business, tx_orgreferences_type,'.
+                              'tx_orgreferences_cat, tx_orgreferences_focus, tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_course, tx_orgreferences_business, tx_orgreferences_tool,'.
                               'fe_users,tx_org_headquarters,'.
                               'tx_org_cal,tx_org_news,'.
                               'logo, logoseo, image, imagecaption, imageseo, documents,'.
@@ -547,7 +547,7 @@ $TCA['tx_orgreferences'] = array (
     'tx_orgreferences_achievement'    => $arr_tx_orgreferences_cat,
     'tx_orgreferences_course'    => $arr_tx_orgreferences_cat,
     'tx_orgreferences_business' => $arr_tx_orgreferences_cat,
-    'tx_orgreferences_type'      => $arr_tx_orgreferences_cat,
+    'tx_orgreferences_tool'      => $arr_tx_orgreferences_cat,
     'fe_users' => array (
       'exclude' => $bool_exclude_default,
       'label'   => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.fe_users',
@@ -605,7 +605,7 @@ $TCA['tx_orgreferences'] = array (
     '0' => array('showitem' =>  '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_references,           title, uid_extern, short, text;;;richtext[]:rte_transform[mode=ts];, static_languages, static_countries, static_country_zones, location, length, recurrence, value, tx_org_tax, url, rating,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_requirements,       requirements;;;richtext[]:rte_transform[mode=ts];,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_subject,            subject;;;richtext[]:rte_transform[mode=ts];,'.
-                                '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_categories,         tx_orgreferences_cat, tx_orgreferences_focus, tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_course, tx_orgreferences_business, tx_orgreferences_type,'.
+                                '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_categories,         tx_orgreferences_cat, tx_orgreferences_focus, tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_course, tx_orgreferences_business, tx_orgreferences_tool,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_user_headquarter,   fe_users,tx_org_headquarters,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_cal_news,           tx_org_cal,tx_org_news,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_media,              logo, logoseo, image, imagecaption, imageseo, documents,'.
@@ -793,39 +793,39 @@ if($bool_wizards_wo_add_and_list_for_catTables)
 }
   // Relation tx_orgreferences_sector
 
-  // Relation tx_orgreferences_type
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['label'] =
-  'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.tx_orgreferences_type';
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['size'] =
+  // Relation tx_orgreferences_tool
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['label'] =
+  'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.tx_orgreferences_tool';
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['size'] =
   1;
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['items'][] =
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['items'][] =
   array('', 0);
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['minitems'] =
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['minitems'] =
   1;
-//$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['maxitems'] =
+//$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['maxitems'] =
 //  1;
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['MM'] =
-  'tx_orgreferences_mm_tx_orgreferences_type';
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['foreign_table'] =
-  'tx_orgreferences_type';
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['foreign_table_where'] =
-  'AND tx_orgreferences_type.' . $str_store_record_conf . ' ORDER BY tx_orgreferences_type.title';
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['wizards']['add']['title'] =
-  'LLL:EXT:orgreferences/locallang_db.xml:wizard.tx_orgreferences_type.add';
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['wizards']['add']['params']['table'] =
-  'tx_orgreferences_type';
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['wizards']['list']['title'] =
-  'LLL:EXT:orgreferences/locallang_db.xml:wizard.tx_orgreferences_type.list';
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['wizards']['edit']['title'] =
-  'LLL:EXT:orgreferences/locallang_db.xml:wizard.tx_orgreferences_type.edit';
-$TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['wizards']['list']['params']['table'] =
-  'tx_orgreferences_type';
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['MM'] =
+  'tx_orgreferences_mm_tx_orgreferences_tool';
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['foreign_table'] =
+  'tx_orgreferences_tool';
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['foreign_table_where'] =
+  'AND tx_orgreferences_tool.' . $str_store_record_conf . ' ORDER BY tx_orgreferences_tool.title';
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['wizards']['add']['title'] =
+  'LLL:EXT:orgreferences/locallang_db.xml:wizard.tx_orgreferences_tool.add';
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['wizards']['add']['params']['table'] =
+  'tx_orgreferences_tool';
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['wizards']['list']['title'] =
+  'LLL:EXT:orgreferences/locallang_db.xml:wizard.tx_orgreferences_tool.list';
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['wizards']['edit']['title'] =
+  'LLL:EXT:orgreferences/locallang_db.xml:wizard.tx_orgreferences_tool.edit';
+$TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['wizards']['list']['params']['table'] =
+  'tx_orgreferences_tool';
 if($bool_wizards_wo_add_and_list_for_catTables)
 {
-  unset($TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['wizards']['add']);
-  unset($TCA['tx_orgreferences']['columns']['tx_orgreferences_type']['config']['wizards']['list']);
+  unset($TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['wizards']['add']);
+  unset($TCA['tx_orgreferences']['columns']['tx_orgreferences_tool']['config']['wizards']['list']);
 }
-  // Relation tx_orgreferences_type
+  // Relation tx_orgreferences_tool
 
   // Relation tx_org_cal
 $TCA['tx_orgreferences']['columns']['tx_org_cal']['label'] =
@@ -1211,40 +1211,40 @@ $TCA['tx_orgreferences_sector']['columns']['tx_orgreferences']['config']['MM_opp
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //
-  // tx_orgreferences_type
+  // tx_orgreferences_tool
 
-$TCA['tx_orgreferences_type'] = array (
-  'ctrl' => $TCA['tx_orgreferences_type']['ctrl'],
+$TCA['tx_orgreferences_tool'] = array (
+  'ctrl' => $TCA['tx_orgreferences_tool']['ctrl'],
   'interface' => array (
     'showRecordFieldList' =>  'title,tx_orgreferences,'.
                               'hidden'
   ),
-  'feInterface' => $TCA['tx_orgreferences_type']['feInterface'],
+  'feInterface' => $TCA['tx_orgreferences_tool']['feInterface'],
   'columns' => array (
     'title' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_type.title',
+      'label' => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_tool.title',
       'config'  => $conf_input_30_trimRequired,
     ),
     'tx_orgreferences' => $TCA['tx_orgreferences_cat']['columns']['tx_orgreferences'],
     'hidden'          => $conf_hidden,
   ),
   'types' => array (
-    '0' => array('showitem' =>  '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_type.div_type,     title,tx_orgreferences,'.
-                                '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_type.div_access,   hidden'.
+    '0' => array('showitem' =>  '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_tool.div_tool,     title,tx_orgreferences,'.
+                                '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_tool.div_access,   hidden'.
                                 ''),
   ),
 );
 
   // Relation tx_orgreferences
-$TCA['tx_orgreferences_type']['columns']['tx_orgreferences']['config']['maxitems'] = 999;
-unset($TCA['tx_orgreferences_type']['columns']['tx_orgreferences']['config']['items']);
-$TCA['tx_orgreferences_type']['columns']['tx_orgreferences']['config']['MM'] =
-  'tx_orgreferences_mm_tx_orgreferences_type';
-$TCA['tx_orgreferences_type']['columns']['tx_orgreferences']['config']['MM_opposite_field'] =
-  'tx_orgreferences_type';
+$TCA['tx_orgreferences_tool']['columns']['tx_orgreferences']['config']['maxitems'] = 999;
+unset($TCA['tx_orgreferences_tool']['columns']['tx_orgreferences']['config']['items']);
+$TCA['tx_orgreferences_tool']['columns']['tx_orgreferences']['config']['MM'] =
+  'tx_orgreferences_mm_tx_orgreferences_tool';
+$TCA['tx_orgreferences_tool']['columns']['tx_orgreferences']['config']['MM_opposite_field'] =
+  'tx_orgreferences_tool';
   // Relation tx_orgreferences
-  // tx_orgreferences_type
+  // tx_orgreferences_tool
 
 
 

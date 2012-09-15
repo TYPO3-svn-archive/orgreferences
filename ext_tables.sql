@@ -8,7 +8,7 @@
 # tx_orgreferences_focus
 # tx_orgreferences_business
 # tx_orgreferences_sector
-# tx_orgreferences_type
+# tx_orgreferences_tool
 # tx_orgreferences_mm_fe_users
 # tx_orgreferences_mm_tx_org_headquarters
 # tx_orgreferences_mm_tx_orgreferences_client
@@ -18,7 +18,7 @@
 # tx_orgreferences_mm_tx_orgreferences_focus
 # tx_orgreferences_mm_tx_orgreferences_business
 # tx_orgreferences_mm_tx_orgreferences_sector
-# tx_orgreferences_mm_tx_orgreferences_type
+# tx_orgreferences_mm_tx_orgreferences_tool
 # tx_orgreferences_mm_tx_org_cal
 
 # fe_users
@@ -60,7 +60,7 @@ CREATE TABLE tx_orgreferences (
   tx_orgreferences_achievement tinytext,
   tx_orgreferences_course tinytext,
   tx_orgreferences_business tinytext,
-  tx_orgreferences_type tinytext,
+  tx_orgreferences_tool tinytext,
   fe_users tinytext,
   tx_org_headquarters tinytext,
   tx_org_cal tinytext,
@@ -226,9 +226,9 @@ CREATE TABLE tx_orgreferences_sector (
 
 
 #
-# Table structure for table 'tx_orgreferences_type'
+# Table structure for table 'tx_orgreferences_tool'
 #
-CREATE TABLE tx_orgreferences_type (
+CREATE TABLE tx_orgreferences_tool (
   uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
   pid int(11) unsigned DEFAULT '0' NOT NULL,
   tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -381,9 +381,9 @@ CREATE TABLE tx_orgreferences_mm_tx_orgreferences_sector (
 
 
 #
-# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_type'
+# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_tool'
 #
-CREATE TABLE tx_orgreferences_mm_tx_orgreferences_type (
+CREATE TABLE tx_orgreferences_mm_tx_orgreferences_tool (
   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
   tablenames varchar(30) DEFAULT '' NOT NULL,

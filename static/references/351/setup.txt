@@ -62,9 +62,9 @@ plugin.tx_browser_pi1 {
           my_static_country_zones {
             data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.static_country_zones
           }
-          my_type = TEXT
-          my_type {
-            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_type.title
+          my_tool = TEXT
+          my_tool {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_tool.title
           }
           my_summary = TEXT
           my_summary {
@@ -98,7 +98,7 @@ plugin.tx_browser_pi1 {
           tx_orgreferences_cat.title,
           tx_orgreferences_achievement.title,
           tx_orgreferences_sector.title,
-          tx_orgreferences_type.title,
+          tx_orgreferences_tool.title,
           static_country_zones.zn_name_local
         )
         csvLinkToSingleView = tx_orgreferences.title
@@ -297,9 +297,9 @@ plugin.tx_browser_pi1 {
           my_static_country_zones {
             data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.static_country_zones
           }
-          my_type = TEXT
-          my_type {
-            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_type.title
+          my_tool = TEXT
+          my_tool {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_tool.title
           }
           my_listview_page = TEXT
           my_listview_page {
@@ -344,7 +344,7 @@ plugin.tx_browser_pi1 {
           tx_orgreferences_cat.title,
           tx_orgreferences_achievement.title,
           tx_orgreferences_sector.title,
-          tx_orgreferences_type.title,
+          tx_orgreferences_tool.title,
           static_country_zones.zn_name_local
         )
         //orderBy = tx_org_cal_mm_calentrance.sorting, tx_org_calentrance.title
