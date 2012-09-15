@@ -6,7 +6,7 @@
 # tx_orgreferences_course
 # tx_orgreferences_degree
 # tx_orgreferences_focus
-# tx_orgreferences_riskcycle
+# tx_orgreferences_business
 # tx_orgreferences_sector
 # tx_orgreferences_type
 # tx_orgreferences_mm_fe_users
@@ -16,7 +16,7 @@
 # tx_orgreferences_mm_tx_orgreferences_course
 # tx_orgreferences_mm_tx_orgreferences_degree
 # tx_orgreferences_mm_tx_orgreferences_focus
-# tx_orgreferences_mm_tx_orgreferences_riskcycle
+# tx_orgreferences_mm_tx_orgreferences_business
 # tx_orgreferences_mm_tx_orgreferences_sector
 # tx_orgreferences_mm_tx_orgreferences_type
 # tx_orgreferences_mm_tx_org_cal
@@ -59,7 +59,7 @@ CREATE TABLE tx_orgreferences (
   tx_orgreferences_audience tinytext,
   tx_orgreferences_degree tinytext,
   tx_orgreferences_course tinytext,
-  tx_orgreferences_riskcycle tinytext,
+  tx_orgreferences_business tinytext,
   tx_orgreferences_type tinytext,
   fe_users tinytext,
   tx_org_headquarters tinytext,
@@ -186,9 +186,9 @@ CREATE TABLE tx_orgreferences_focus (
 
 
 #
-# Table structure for table 'tx_orgreferences_riskcycle'
+# Table structure for table 'tx_orgreferences_business'
 #
-CREATE TABLE tx_orgreferences_riskcycle (
+CREATE TABLE tx_orgreferences_business (
   uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
   pid int(11) unsigned DEFAULT '0' NOT NULL,
   tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -351,9 +351,9 @@ CREATE TABLE tx_orgreferences_mm_tx_org_headquarters (
 
 
 #
-# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_riskcycle'
+# Table structure for table 'tx_orgreferences_mm_tx_orgreferences_business'
 #
-CREATE TABLE tx_orgreferences_mm_tx_orgreferences_riskcycle (
+CREATE TABLE tx_orgreferences_mm_tx_orgreferences_business (
   uid_local int(11) unsigned DEFAULT '0' NOT NULL,
   uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
   tablenames varchar(30) DEFAULT '' NOT NULL,
