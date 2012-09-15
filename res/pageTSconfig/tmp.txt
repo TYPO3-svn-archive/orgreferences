@@ -10,3 +10,57 @@ mod {
     )
   }
 }
+
+  ///////////////////////////
+  //
+  // INDEX
+
+  // TCEFORM
+  //    organiser tables
+  // LINKHANDLER
+  //    mod.tx_linkhandler
+  //    RTE.default.tx_linkhandler
+  // TCEMAIN
+  //    clearCacheCmd
+  //    permissions
+  // MOD
+  //    web_layout
+
+
+
+  // PID
+  // [1281] organiser
+  //    [7546] references
+
+  // organiser tables
+TCEFORM {
+  fe_users {
+    tx_orgreferences {
+      PAGE_TSCONFIG_IDLIST  = 1281,7546
+      PAGE_TSCONFIG_ID      = 7546
+    }
+  }
+  tx_org_cal_all_tables {
+    tx_orgreferences {
+      PAGE_TSCONFIG_IDLIST  = 1281,7546
+      PAGE_TSCONFIG_ID      = 7546
+    }
+    tx_orgreferences_achievement  < .tx_org_cal_all_tables
+    tx_orgreferences_business     < .tx_org_cal_all_tables
+    tx_orgreferences_client       < .tx_org_cal_all_tables
+    tx_orgreferences_sector       < .tx_org_cal_all_tables
+    tx_orgreferences_tool         < .tx_org_cal_all_tables
+  }
+  tx_orgreferences              < .tx_org_cal_all_tables
+  tx_orgreferences_achievement  < .tx_org_cal_all_tables
+  tx_orgreferences_business     < .tx_org_cal_all_tables
+  tx_orgreferences_client       < .tx_org_cal_all_tables
+  tx_orgreferences_sector       < .tx_org_cal_all_tables
+  tx_orgreferences_tool         < .tx_org_cal_all_tables
+}
+  // organiser tables
+  // TCEFORM
+
+
+
+
