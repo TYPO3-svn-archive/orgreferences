@@ -12,7 +12,7 @@
       <label index="filter_phrase.static_country_zones">All states</label>
       <label index="filter_phrase.tx_org_headquarters">All providers</label>
       <label index="filter_phrase.tx_orgreferences">All referencess</label>
-      <label index="filter_phrase.tx_orgreferences_audience">All audience</label>
+      <label index="filter_phrase.tx_orgreferences_client">All clients</label>
       <label index="filter_phrase.tx_orgreferences_cat">All categories</label>
       <label index="filter_phrase.tx_orgreferences_course">All course types</label>
       <label index="filter_phrase.tx_orgreferences_degree">All degrees</label>
@@ -67,7 +67,7 @@
       <label index="tx_orgreferences.requirements">Requirements</label>
       <label index="tx_orgreferences.subject">Subject</label>
 
-      <label index="tx_orgreferences.tx_orgreferences_audience">Audience</label>
+      <label index="tx_orgreferences.tx_orgreferences_client">Clients</label>
       <label index="tx_orgreferences.tx_orgreferences_cat">Category</label>
       <label index="tx_orgreferences.tx_orgreferences_course">Course type</label>
       <label index="tx_orgreferences.tx_orgreferences_degree">Degree</label>
@@ -81,11 +81,11 @@
       <label index="tx_orgreferences.tx_org_cal">Calendar</label>
       <label index="tx_orgreferences.tx_org_news">News</label>
 
-      <label index="tx_orgreferences_audience">References: audience</label>
-      <label index="tx_orgreferences_audience.div_audience">Audience</label>
-      <label index="tx_orgreferences_audience.div_access">Access</label>
-      <label index="tx_orgreferences_audience.title">Audience</label>
-      <label index="tx_orgreferences_audience.tx_orgreferences">References</label>
+      <label index="tx_orgreferences_client">References: clients</label>
+      <label index="tx_orgreferences_client.div_client">Clients</label>
+      <label index="tx_orgreferences_client.div_access">Access</label>
+      <label index="tx_orgreferences_client.title">Client</label>
+      <label index="tx_orgreferences_client.tx_orgreferences">References</label>
       <label index="tx_orgreferences_cat">References: categories</label>
       <label index="tx_orgreferences_cat.div_cat">Category</label>
       <label index="tx_orgreferences_cat.div_access">Access</label>
@@ -137,9 +137,9 @@
       <label index="wizard.references.add">Add a new reference</label>
       <label index="wizard.references.edit"> Edit the current reference</label>
       <label index="wizard.references.list">Display the references table</label>
-      <label index="wizard.references_audience.add">Add a new audience category</label>
-      <label index="wizard.references_audience.edit"> Edit the current audience category</label>
-      <label index="wizard.references_audience.list">Display the audience category table</label>
+      <label index="wizard.references_client.add">Add a new client category</label>
+      <label index="wizard.references_client.edit"> Edit the current client category</label>
+      <label index="wizard.references_client.list">Display the client category table</label>
       <label index="wizard.references_cat.add">Add a new reference category</label>
       <label index="wizard.references_cat.edit"> Edit the current reference category</label>
       <label index="wizard.references_cat.list">Display the references category table</label>
@@ -170,7 +170,7 @@
       <label index="filter_phrase.static_country_zones">Alle Bundesländer</label>
       <label index="filter_phrase.tx_org_headquarters">Alle Anbieter</label>
       <label index="filter_phrase.tx_orgreferences">Alle Referenzen</label>
-      <label index="filter_phrase.tx_orgreferences_audience">Alle Zielgruppen</label>
+      <label index="filter_phrase.tx_orgreferences_client">Alle Kunden</label>
       <label index="filter_phrase.tx_orgreferences_cat">Alle Kategorien</label>
       <label index="filter_phrase.tx_orgreferences_course">Alle Kurs-Typen</label>
       <label index="filter_phrase.tx_orgreferences_degree">Alle Abschlüsse</label>
@@ -225,7 +225,7 @@
       <label index="tx_orgreferences.requirements">Voraussetzungen</label>
       <label index="tx_orgreferences.subject">Thema</label>
       
-      <label index="tx_orgreferences.tx_orgreferences_audience">Zielgruppe</label>
+      <label index="tx_orgreferences.tx_orgreferences_client">Kunde</label>
       <label index="tx_orgreferences.tx_orgreferences_cat">Kategorie</label>
       <label index="tx_orgreferences.tx_orgreferences_course">Kurs-Typ</label>
       <label index="tx_orgreferences.tx_orgreferences_degree">Abschluss</label>
@@ -239,11 +239,11 @@
       <label index="tx_orgreferences.tx_org_cal">Kalender</label>
       <label index="tx_orgreferences.tx_org_news">Nachrichten</label>
 
-      <label index="tx_orgreferences_audience">Referenzen: Zielgruppen</label>
-      <label index="tx_orgreferences_audience.div_audience">Zielgruppe</label>
-      <label index="tx_orgreferences_audience.div_access">Steuerung</label>
-      <label index="tx_orgreferences_audience.title">Zielgruppe</label>
-      <label index="tx_orgreferences_audience.tx_orgreferences">Referenzen</label>
+      <label index="tx_orgreferences_client">Referenzen: Kunden</label>
+      <label index="tx_orgreferences_client.div_client">Kunde</label>
+      <label index="tx_orgreferences_client.div_access">Steuerung</label>
+      <label index="tx_orgreferences_client.title">Kunde</label>
+      <label index="tx_orgreferences_client.tx_orgreferences">Referenzen</label>
       <label index="tx_orgreferences_cat">Referenzen: Kategorien</label>
       <label index="tx_orgreferences_cat.div_cat">Kategorie</label>
       <label index="tx_orgreferences_cat.div_access">Steuerung</label>
@@ -295,9 +295,9 @@
       <label index="wizard.references.add">Neue Referenz anlegen</label>
       <label index="wizard.references.edit"> Ausgewählte Referenz bearbeiten</label>
       <label index="wizard.references.list">Tabelle mit Referenzen ansehen</label>
-      <label index="wizard.references_audience.add">Neue Zielgruppe anlegen</label>
-      <label index="wizard.references_audience.edit"> Ausgewählte Zielgruppe bearbeiten</label>
-      <label index="wizard.references_audience.list">Tabelle mit Zielgruppen ansehen</label>
+      <label index="wizard.references_client.add">Neuen Kunden anlegen</label>
+      <label index="wizard.references_client.edit"> Ausgewählten Kunden bearbeiten</label>
+      <label index="wizard.references_client.list">Tabelle mit Kunden ansehen</label>
       <label index="wizard.references_cat.add">Neue Kategorie anlegen</label>
       <label index="wizard.references_cat.edit"> Ausgewählte Kategorie bearbeiten</label>
       <label index="wizard.references_cat.list">Tabelle mit Kategorien ansehen</label>

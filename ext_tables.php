@@ -22,7 +22,7 @@ if (!defined ('TYPO3_MODE'))
   //    tx_org_headquarters
   // TCA tables
   //    orgreferences
-  //    orgreferences_audience
+  //    orgreferences_client
   //    orgreferences_cat
   //    orgreferences_course
   //    orgreferences_degree
@@ -394,7 +394,7 @@ $TCA['tx_org_headquarters']['types']['0']['showitem']   = $str_showitem;
   // TCA tables
 
   // orgreferences
-  // orgreferences_audience
+  // orgreferences_client
   // orgreferences_cat
   // orgreferences_course
   // orgreferences_degree
@@ -429,10 +429,10 @@ $TCA['tx_orgreferences'] = array (
 );
   // orgreferences /////////////////////////////////////////////////////////////////////
 
-  // orgreferences_audience ///////////////////////////////////////////////////////////////////
-$TCA['tx_orgreferences_audience'] = array (
+  // orgreferences_client ///////////////////////////////////////////////////////////////////
+$TCA['tx_orgreferences_client'] = array (
   'ctrl' => array (
-    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_audience',
+    'title'             => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_client',
     'label'             => 'title',
     'tstamp'            => 'tstamp',
     'crdate'            => 'crdate',
@@ -446,10 +446,10 @@ $TCA['tx_orgreferences_audience'] = array (
     'hideAtCopy'        => false,
     'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY).'tca.php',
     'thumbnail'         => 'image',
-    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/audience.gif',
+    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/client.gif',
   ),
 );
-  // orgreferences_audience ///////////////////////////////////////////////////////////////////
+  // orgreferences_client ///////////////////////////////////////////////////////////////////
 
   // orgreferences_cat ///////////////////////////////////////////////////////////////////
 $TCA['tx_orgreferences_cat'] = array (
