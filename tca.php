@@ -260,6 +260,15 @@ switch($confArr['full_wizardSupport'])
     'softref' => 'typolink',
   );
 
+
+  $conf_datetime = array (
+    'type'    => 'input',
+    'size'    => '10',
+    'max'     => '20',
+    'eval'    => 'datetime',
+    'default' => mktime(date('H'),date('i'),0,date('m'),date('d'),date('Y')),
+  );
+  
   $conf_file_document = array (
     'type'          => 'group',
     'internal_type' => 'file',
@@ -396,7 +405,7 @@ switch($confArr['full_wizardSupport'])
 $TCA['tx_orgreferences'] = array (
   'ctrl' => $TCA['tx_orgreferences']['ctrl'],
   'interface' => array (
-    'showRecordFieldList' =>  'title, short, text, static_languages, static_countries, static_country_zones, location, url,'.
+    'showRecordFieldList' =>  'title, short, text, static_countries, static_country_zones, location, longitude, latitude, staff, url,'.
                               'tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_business, tx_orgreferences_tool,'.
                               'fe_users,tx_org_headquarters,'.
                               'tx_org_cal,tx_org_news,'.
@@ -421,22 +430,11 @@ $TCA['tx_orgreferences'] = array (
       'label'     => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.text',
       'config'    => $conf_text_rte,
     ),
-    'static_languages' => array (
+    'datetime' => array (
       'exclude'   => $bool_exclude_default,
-      'label'     => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.static_languages',
-      'config'    => array (
-        'type'      => 'select',
-        'size'      => 5,
-        'minitems'  => 0,
-        'maxitems'  => 99,
-        'xx_items' => array(
-          '0' => array(
-            '0' => '',
-          ),
-        ),
-        'foreign_table'       => 'static_languages',
-        'foreign_table_where' => ' ORDER BY static_languages.lg_name_en',
-      ),
+      'l10n_mode' => 'exclude',
+      'label'     => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.datetime',
+      'config'    => $conf_datetime,
     ),
     'static_countries' => array (
       'exclude'   => $bool_exclude_default,
@@ -479,6 +477,21 @@ $TCA['tx_orgreferences'] = array (
     'location'  => array (
       'exclude'   => $bool_exclude_default,
       'label'     => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.location',
+      'config'    => $conf_input_80_trim,
+    ),
+    'longitude'  => array (
+      'exclude'   => $bool_exclude_default,
+      'label'     => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.longitude',
+      'config'    => $conf_input_80_trim,
+    ),
+    'latitude'  => array (
+      'exclude'   => $bool_exclude_default,
+      'label'     => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.latitude',
+      'config'    => $conf_input_80_trim,
+    ),
+    'staff'  => array (
+      'exclude'   => $bool_exclude_default,
+      'label'     => 'LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.staff',
       'config'    => $conf_input_80_trim,
     ),
     'url' => array (
@@ -545,7 +558,7 @@ $TCA['tx_orgreferences'] = array (
     ),
   ),
   'types' => array (
-    '0' => array('showitem' =>  '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_references,           title, uid_extern, short, text;;;richtext[]:rte_transform[mode=ts];, static_languages, static_countries, static_country_zones, location, length, recurrence, value, tx_org_tax, url, rating,'.
+    '0' => array('showitem' =>  '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_references,         title, uid_extern, short, text;;;richtext[]:rte_transform[mode=ts];, static_countries, static_country_zones, location, longitude, latitude, staff, url,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_categories,         tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_business, tx_orgreferences_tool,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_user_headquarter,   fe_users,tx_org_headquarters,'.
                                 '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_cal_news,           tx_org_cal,tx_org_news,'.

@@ -46,10 +46,13 @@
       <label index="tx_orgreferences.title">Name of the reference</label>
       <label index="tx_orgreferences.short">Short</label>
       <label index="tx_orgreferences.text">Bodytext</label>
-      <label index="tx_orgreferences.static_languages">Languages</label>
+      <label index="tx_orgreferences.datetime">Date (ending date of the project)</label>
       <label index="tx_orgreferences.static_countries">Country</label>
       <label index="tx_orgreferences.static_country_zones">State</label>
       <label index="tx_orgreferences.location">Location</label>
+      <label index="tx_orgreferences.longitude">Longitude</label>
+      <label index="tx_orgreferences.latitude">Latitude</label>
+      <label index="tx_orgreferences.staff">Staff</label>
       <label index="tx_orgreferences.url">URL</label>
 
       <label index="tx_orgreferences.tx_orgreferences_achievement">Archievement</label>
@@ -163,10 +166,13 @@
       <label index="tx_orgreferences.title">Name der Referenz</label>
       <label index="tx_orgreferences.short">Kurzbeschreibung</label>
       <label index="tx_orgreferences.text">Text</label>
-      <label index="tx_orgreferences.static_languages">Sprachen</label>
+      <label index="tx_orgreferences.datetime">Datum (Abschlussdatum des Projekts)</label>
       <label index="tx_orgreferences.static_countries">Land</label>
       <label index="tx_orgreferences.static_country_zones">Bundesland, Kanton</label>
       <label index="tx_orgreferences.location">Ort</label>
+      <label index="tx_orgreferences.longitude">L<![CDATA[&auml;]]>ngengrad</label>
+      <label index="tx_orgreferences.latitude">Breitengrad</label>
+      <label index="tx_orgreferences.staff">Mitarbeiter</label>
       <label index="tx_orgreferences.url">URL</label>
       
       <label index="tx_orgreferences.tx_orgreferences_achievement">Leistung</label>
