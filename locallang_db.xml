@@ -51,7 +51,7 @@
       <label index="tx_orgreferences.div_user_headquarter"><![CDATA[User & provider]]></label>
       <label index="tx_orgreferences.div_cal_news"><![CDATA[Calender & news]]></label>
       <label index="tx_orgreferences.div_media">Media</label>
-      <label index="tx_orgreferences.div_logoAndHeader">Logo <![CDATA[&]]> Header</label>
+      <label index="tx_orgreferences.div_logoAndHeader">Logo, Header, Documents</label>
       <label index="tx_orgreferences.div_access">Access</label>
       <label index="tx_orgreferences.div_seo">Search Engines</label>
       <label index="tx_orgreferences.title">Name of the reference</label>
@@ -180,6 +180,7 @@
       <label index="tx_orgreferences.div_user_headquarter"><![CDATA[Kontakt & Anbieter]]></label>
       <label index="tx_orgreferences.div_cal_news"><![CDATA[Kalender & Nachrichten]]></label>
       <label index="tx_orgreferences.div_media">Medien</label>
+      <label index="tx_orgreferences.div_logoAndHeader">Logo, Kopf-Grafik, Dokumente</label>
       <label index="tx_orgreferences.div_access">Steuerung</label>
       <label index="tx_orgreferences.div_seo">Suchmaschinen</label>
       <label index="tx_orgreferences.title">Name der Referenz</label>
