@@ -76,27 +76,25 @@ plugin.tx_browser_pi1 {
           }
           my_singleview_title = TEXT
           my_singleview_title {
-            value   = Event
-            lang.de = Veranstaltung
+            value   = Reference
+            lang.de = Referenz
             wrap    = <div class="header01">|</div>
             typolink {
-              parameter = {$plugin.org.pages.calendar}
+              parameter = {$plugin.org.pages.references}
               title {
-                value = All Events
-               lang.de = Alle Veranstaltungen
+                value = All References
+               lang.de = Alle Referenzen
               }
             }
           }
         }
         select (
           tx_orgreferences.title,
-          tx_orgreferences.uid_extern,
           tx_orgreferences.short,
           tx_orgreferences.text,
-          tx_orgreferences.rating,
-          tx_org_headquarters.title,
-          tx_orgreferences_cat.title,
           tx_orgreferences_achievement.title,
+          tx_orgreferences_business.title,
+          tx_orgreferences_client.title,
           tx_orgreferences_sector.title,
           tx_orgreferences_tool.title,
           static_country_zones.zn_name_local
@@ -149,13 +147,6 @@ plugin.tx_browser_pi1 {
             wrap  = <p class="tx_orgreferences_short">|</p>
           }
         }
-        tx_org_headquarters {
-          title = TEXT
-          title {
-            wrap  = <p class="headquarter">|</p>
-            value = ###TX_ORG_HEADQUARTERS.TITLE###
-          }
-        }
 
         filter {
           static_country_zones {
@@ -195,25 +186,7 @@ plugin.tx_browser_pi1 {
               wrap = <span class="selectbox selectbox_tx_org_headquarters">|</span>
             }
           }
-          tx_orgreferences {
-            rating < plugin.tx_browser_pi1.displayList.master_templates.selectbox
-            rating {
-              first_item {
-                stdWrap {
-                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences.rating
-                }
-              }
-              wrap {
-                item {
-                  stdWrap {
-                    crop = 30 | ... | 1
-                  }
-                }
-              }
-              wrap = <span class="selectbox selectbox_tx_orgreferences_rating">|</span>
-            }
-          }
-          tx_orgreferences_cat {
+          tx_orgreferences_client {
             title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
             title {
               first_item {
@@ -308,7 +281,7 @@ plugin.tx_browser_pi1 {
             typolink {
               parameter = {$plugin.org.pages.references}
               title {
-                value = All references
+                value = All References
                 lang.de = Alle Referenzen
               }
             }
@@ -324,15 +297,7 @@ plugin.tx_browser_pi1 {
         }
         select (
           tx_orgreferences.title,
-          tx_orgreferences.uid_extern,
           tx_orgreferences.text,
-          tx_orgreferences.location,
-          tx_orgreferences.rating,
-          tx_orgreferences.requirements,
-          tx_orgreferences.subject,
-          tx_orgreferences.length,
-          tx_orgreferences.value,
-          tx_orgreferences.tx_org_tax,
           tx_orgreferences.url,
           tx_orgreferences.logo,
           tx_orgreferences.logoseo,
@@ -340,9 +305,8 @@ plugin.tx_browser_pi1 {
           tx_orgreferences.imagecaption,
           tx_orgreferences.imageseo,
           tx_orgreferences.documents,
-          tx_org_headquarters.title,
-          tx_orgreferences_cat.title,
           tx_orgreferences_achievement.title,
+          tx_orgreferences_client.title,
           tx_orgreferences_sector.title,
           tx_orgreferences_tool.title,
           static_country_zones.zn_name_local
@@ -375,32 +339,6 @@ plugin.tx_browser_pi1 {
           text = TEXT
           text {
             stdWrap.parseFunc < lib.parseFunc_RTE
-          }
-          requirements = COA
-          requirements {
-            10 = TEXT
-            10 {
-              value   = Requirements
-              lang.de = Voraussetzungen
-              wrap    =  <h3>|</h3>
-            }
-            20 = TEXT
-            20 {
-              value = ###TX_ORGREFERENCES.REQUIREMENTS###
-              stdWrap.parseFunc < lib.parseFunc_RTE
-            }
-            wrap = <div class="tx_orgreferences_requirements">|</div>
-          }
-          subject < .requirements
-          subject {
-            10 {
-              value   = Subject
-              lang.de = Thema
-            }
-            20 {
-              value = ###TX_ORGREFERENCES.SUBJECT###
-            }
-            wrap = <div class="tx_orgreferences_subject">|</div>
           }
           image < tt_content.image.20
           image {
@@ -476,29 +414,6 @@ plugin.tx_browser_pi1 {
             stdWrap {
               prefixComment >
               wrap          = <div class="logo">|</div>
-            }
-          }
-        }
-        tx_org_headquarters {
-          title = TEXT
-          title {
-            wrap  = <p class="headquarter">|</p>
-            value = ###TX_ORG_HEADQUARTERS.TITLE###
-          }
-        }
-        tx_org_location {
-          title2 = COA
-          title2 {
-            20 = TEXT
-            20 {
-              value = ###TX_ORG_LOCATION.TITLE###
-              typolink {
-                parameter = {$plugin.org.pages.location}
-                parameter {
-                  insertData = 1
-                }
-                additionalParams = &tx_browser_pi1[locationUid]=###TX_ORG_LOCATION.UID###&###CHASH###
-              }
             }
           }
         }
