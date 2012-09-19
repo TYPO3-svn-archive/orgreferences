@@ -144,7 +144,7 @@
       <label index="filter_phrase.tx_orgreferences">Alle Referenzen</label>
       <label index="filter_phrase.tx_orgreferences_achievement">Alle Leistungen</label>
       <label index="filter_phrase.tx_orgreferences_business">Alle Gesch<![CDATA[&auml;]]>ftsfelder</label>
-      <label index="filter_phrase.tx_orgreferences_clients">Alle Kunden</label>
+      <label index="filter_phrase.tx_orgreferences_client">Alle Kunden</label>
       <label index="filter_phrase.tx_orgreferences_sector">Alle Branchen</label>
       <label index="filter_phrase.tx_orgreferences_tool">Alle Techniken</label>
 
