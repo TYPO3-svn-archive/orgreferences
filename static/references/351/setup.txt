@@ -32,6 +32,7 @@ plugin.tx_browser_pi1 {
 
   views {
     list {
+      351 >
       351 = +Org: References
       351 {
         name    = +Org: References
@@ -164,82 +165,121 @@ plugin.tx_browser_pi1 {
               wrap = <span class="selectbox selectbox_static_country_zones">|</span>
             }
           }
-          tx_org_headquarters {
-            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
-            title {
-              first_item {
-                stdWrap {
-                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_org_headquarters
-                }
-              }
-              wrap {
-                item {
-                  stdWrap {
-                    crop = 30 | ... | 1
-                  }
-                }
-              }
-              wrap = <span class="selectbox selectbox_tx_org_headquarters">|</span>
-            }
-          }
-          tx_orgreferences_client {
-            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
-            title {
-              first_item {
-                stdWrap {
-                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_cat
-                }
-              }
-              wrap {
-                item {
-                  stdWrap {
-                    crop = 30 | ... | 1
-                  }
-                }
-              }
-              wrap = <span class="selectbox selectbox_tx_orgreferences_cat">|</span>
-            }
-          }
           tx_orgreferences_achievement {
             title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
             title {
               first_item {
-                stdWrap {
-                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_achievement
+                cObject {
+                  20 {
+                    data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_achievement
+                  }
                 }
               }
               wrap {
                 item {
-                  stdWrap {
-                    crop = 30 | ... | 1
+                  cObject {
+                    20 {
+                      crop = 30 | ... | 1
+                    }
                   }
                 }
               }
               wrap = <span class="selectbox selectbox_tx_orgreferences_achievement">|</span>
             }
           }
-          tx_orgreferences_sector {
+          tx_orgreferences_business {
             title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
             title {
               first_item {
-                stdWrap {
-                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_sector
+                cObject {
+                  20 {
+                    data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_business
+                  }
                 }
               }
               wrap {
                 item {
-                  stdWrap {
-                    crop = 30 | ... | 1
+                  cObject {
+                    20 {
+                      crop = 30 | ... | 1
+                    }
+                  }
+                }
+              }
+              wrap = <span class="selectbox selectbox_tx_orgreferences_business">|</span>
+            }
+          }
+          tx_orgreferences_client {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              first_item {
+                cObject {
+                  20 {
+                    data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_client
+                  }
+                }
+              }
+              wrap {
+                item {
+                  cObject {
+                    20 {
+                      crop = 30 | ... | 1
+                    }
+                  }
+                }
+              }
+              wrap = <span class="selectbox selectbox_tx_orgreferences_client">|</span>
+            }
+          }
+          tx_orgreferences_sector {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              first_item {
+                cObject {
+                  20 {
+                    data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_sector
+                  }
+                }
+              }
+              wrap {
+                item {
+                  cObject {
+                    20 {
+                      crop = 30 | ... | 1
+                    }
                   }
                 }
               }
               wrap = <span class="selectbox selectbox_tx_orgreferences_sector">|</span>
             }
           }
+          tx_orgreferences_tool {
+            title < plugin.tx_browser_pi1.displayList.master_templates.selectbox
+            title {
+              first_item {
+                cObject {
+                  20 {
+                    data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.tx_orgreferences_tool
+                  }
+                }
+              }
+              wrap {
+                item {
+                  cObject {
+                    20 {
+                      crop = 30 | ... | 1
+                    }
+                  }
+                }
+              }
+              wrap = <span class="selectbox selectbox_tx_orgreferences_tool">|</span>
+            }
+          }
         }
       }
     }
     single {
+      351 >
       351 = References
       351 {
         displaySingle < plugin.tx_browser_pi1.displaySingle
