@@ -800,7 +800,7 @@ $TCA['tx_orgreferences'] = array (
   ),
   'palettes' => array (
     '1' => array('showitem' => 'starttime,endtime,'),
-    'header' => array (
+    'headerfiles' => array (
       'showitem' => 'header;LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.header, headerseo;LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.headerseo,',
       'canNotCollapse' => 1,
     ),
@@ -826,7 +826,7 @@ $TCA['tx_orgreferences'] = array (
                     'image_compression;LLL:EXT:cms/locallang_ttc.xml:image_compression_formlabel, image_effects;LLL:EXT:cms/locallang_ttc.xml:image_effects_formlabel, image_frames;LLL:EXT:cms/locallang_ttc.xml:image_frames_formlabel',
       'canNotCollapse' => 1,
     ),
-    'logo' => array (
+    'logofiles' => array (
       'showitem' => 'logo;LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.logo, logoseo;LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.logoseo,',
       'canNotCollapse' => 1,
     ),
