@@ -783,8 +783,8 @@ $TCA['tx_orgreferences'] = array (
       '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_references,         title, uid_extern, short, text;;;richtext[]:rte_transform[mode=ts];, datetime, static_countries, static_country_zones, location, longitude, latitude, staff, url,'.
       '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_categories,         tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_business, tx_orgreferences_tool,'.
       '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_logoAndHeader, ' .
-        '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.logofiles;logofiles,' .
-        '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.headerfiles;headerfiles,' .
+        '--palette--;LLL:EXT:orgreferences/locallang_db.xml:palette.logofiles;logofiles,' .
+        '--palette--;LLL:EXT:orgreferences/locallang_db.xml:palette.headerfiles;headerfiles,' .
         'documents, ' .
       '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
         '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
