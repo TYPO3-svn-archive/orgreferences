@@ -13,7 +13,7 @@
       <label index="filter_phrase.tx_org_headquarters">All providers</label>
       <label index="filter_phrase.tx_orgreferences">All referencess</label>
       <label index="filter_phrase.tx_orgreferences_achievement">All achievement</label>
-      <label index="filter_phrase.tx_orgreferences_business">Business segment</label>
+      <label index="filter_phrase.tx_orgreferences_business">All business segments</label>
       <label index="filter_phrase.tx_orgreferences_client">All clients</label>
       <label index="filter_phrase.tx_orgreferences_sector">All sectors</label>
       <label index="filter_phrase.tx_orgreferences_tool">All tools</label>
@@ -143,8 +143,8 @@
       <label index="filter_phrase.tx_org_headquarters">Alle Anbieter</label>
       <label index="filter_phrase.tx_orgreferences">Alle Referenzen</label>
       <label index="filter_phrase.tx_orgreferences_achievement">Alle Leistungen</label>
-      <label index="filter_phrase.tx_orgreferences_business">Gesch<![CDATA[&auml;]]>ftsfeld</label>
-      <label index="filter_phrase.tx_orgreferences_focus">Alle Schwerpunkte</label>
+      <label index="filter_phrase.tx_orgreferences_business">Alle Gesch<![CDATA[&auml;]]>ftsfelder</label>
+      <label index="filter_phrase.tx_orgreferences_clients">Alle Kunden</label>
       <label index="filter_phrase.tx_orgreferences_sector">Alle Branchen</label>
       <label index="filter_phrase.tx_orgreferences_tool">Alle Techniken</label>
 
