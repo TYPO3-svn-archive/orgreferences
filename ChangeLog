@@ -1,3 +1,11 @@
+0.0.3
+  12-09-19
+  Development
+  * #00001: tx_orgreferences: Image properties like tt_content
+            Effected files:
+            * ext_tables.sql
+            * tca.php
+
 0.0.2
   12-09-15
   Development
