@@ -145,7 +145,7 @@ switch(true) {
 }
   // Case $llStatic
 
-$ICON_TOOLS['org_rfrncs']   = array('icon' => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/references.gif');
+t3lib_SpriteManager::addTcaTypeIcon('pages', 'org_rfrncs', '../typo3conf/ext/orgreferences/ext_icon/references.gif');
 
   // Add pagetree icons
 
