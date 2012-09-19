@@ -47,6 +47,10 @@ plugin.tx_browser_pi1 {
           my_achievement {
             data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_achievement.title
           }
+          my_business = TEXT
+          my_business {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_business.title
+          }
           my_client = TEXT
           my_client {
             data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_client.title
@@ -150,15 +154,18 @@ plugin.tx_browser_pi1 {
             zn_name_local < plugin.tx_browser_pi1.displayList.master_templates.selectbox
             zn_name_local {
               first_item {
-                stdWrap {
-                  data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.static_country_zones
+                cObject {
+                  20 {
+                    data = LLL:EXT:orgreferences/locallang_db.xml:filter_phrase.static_country_zones
+                  }
                 }
-                option_value = -1
               }
               wrap {
                 item {
-                  stdWrap {
-                    crop = 30 | ... | 1
+                  cObject {
+                    20 {
+                      crop = 30 | ... | 1
+                    }
                   }
                 }
               }
