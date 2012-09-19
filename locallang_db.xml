@@ -19,6 +19,7 @@
       <label index="filter_phrase.tx_orgreferences_tool">All tools</label>
       <label index="filter_phrase.references">Reference</label>
 
+      <label index="palette.headerfiles">Header and header description</label>
       <label index="palette.logofiles">Logo and logo description</label>
 
       <label index="tca_phrase.description">Description for Search Engine Optimisation</label>
