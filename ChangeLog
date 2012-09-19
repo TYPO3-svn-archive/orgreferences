@@ -4,6 +4,7 @@
   * #00001: tx_orgreferences: Image properties like tt_content
             Effected files:
             * ext_tables.sql
+            * locallang_db.xml
             * tca.php
 
 0.0.2
