@@ -42,17 +42,13 @@ plugin.tx_browser_pi1 {
         }
         marker < plugin.tx_browser_pi1.marker
         marker {
-          my_uid_extern = TEXT
-          my_uid_extern {
-            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.uid_extern
-          }
-          my_cat = TEXT
-          my_cat {
-            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_cat.title
-          }
           my_achievement = TEXT
           my_achievement {
             data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_achievement.title
+          }
+          my_client = TEXT
+          my_client {
+            data = LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences_client.title
           }
           my_sector = TEXT
           my_sector {
