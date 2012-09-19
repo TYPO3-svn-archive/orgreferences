@@ -19,8 +19,8 @@
       <label index="filter_phrase.tx_orgreferences_tool">All tools</label>
       <label index="filter_phrase.references">Reference</label>
 
-      <label index="palette.headerfiles">Header and header description</label>
-      <label index="palette.logofiles">Logo and logo description</label>
+      <label index="palette.headerfiles">Header</label>
+      <label index="palette.logofiles">Logo</label>
 
       <label index="tca_phrase.description">Description for Search Engine Optimisation</label>
       <label index="tca_phrase.documents">Documents</label>
@@ -147,6 +147,9 @@
       <label index="filter_phrase.tx_orgreferences_focus">Alle Schwerpunkte</label>
       <label index="filter_phrase.tx_orgreferences_sector">Alle Branchen</label>
       <label index="filter_phrase.tx_orgreferences_tool">Alle Techniken</label>
+
+      <label index="palette.headerfiles">Kopf-Grafik</label>
+      <label index="palette.logofiles">Logo</label>
 
       <label index="tca_phrase.description">Beschreibung f<![CDATA[&uuml;]]>r Suchmaschienen</label>
       <label index="tca_phrase.documents">Dokumente</label>
