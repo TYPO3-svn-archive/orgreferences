@@ -12,7 +12,7 @@
       <label index="filter_phrase.static_country_zones">All states</label>
       <label index="filter_phrase.tx_org_headquarters">All providers</label>
       <label index="filter_phrase.tx_orgreferences">All referencess</label>
-      <label index="filter_phrase.tx_orgreferences_achievement">All archievement</label>
+      <label index="filter_phrase.tx_orgreferences_achievement">All achievement</label>
       <label index="filter_phrase.tx_orgreferences_business">Business segment</label>
       <label index="filter_phrase.tx_orgreferences_client">All clients</label>
       <label index="filter_phrase.tx_orgreferences_sector">All sectors</label>
@@ -66,7 +66,7 @@
       <label index="tx_orgreferences.staff">Staff (number)</label>
       <label index="tx_orgreferences.url">URL</label>
 
-      <label index="tx_orgreferences.tx_orgreferences_achievement">Archievement</label>
+      <label index="tx_orgreferences.tx_orgreferences_achievement">Achievement</label>
       <label index="tx_orgreferences.tx_orgreferences_business">Business segment</label>
       <label index="tx_orgreferences.tx_orgreferences_client">Clients</label>
       <label index="tx_orgreferences.tx_orgreferences_sector">Sector</label>
@@ -77,10 +77,10 @@
       <label index="tx_orgreferences.tx_org_cal">Calendar</label>
       <label index="tx_orgreferences.tx_org_news">News</label>
 
-      <label index="tx_orgreferences_achievement">References: archievement</label>
-      <label index="tx_orgreferences_achievement.div_achievement">Archievement</label>
+      <label index="tx_orgreferences_achievement">References: achievement</label>
+      <label index="tx_orgreferences_achievement.div_achievement">Achievement</label>
       <label index="tx_orgreferences_achievement.div_access">Access</label>
-      <label index="tx_orgreferences_achievement.title">Archievement</label>
+      <label index="tx_orgreferences_achievement.title">Achievement</label>
       <label index="tx_orgreferences_achievement.tx_orgreferences">References</label>
       <label index="tx_orgreferences_business">References: business segments</label>
       <label index="tx_orgreferences_business.div_business">Business segment</label>
@@ -118,9 +118,9 @@
       <label index="wizard.references.add">Add a new reference</label>
       <label index="wizard.references.edit"> Edit the current reference</label>
       <label index="wizard.references.list">Display the references table</label>
-      <label index="wizard.references_achievement.add">Add a new archievement</label>
-      <label index="wizard.references_achievement.edit"> Edit the current archievement</label>
-      <label index="wizard.references_achievement.list">Display the archievement table</label>
+      <label index="wizard.references_achievement.add">Add a new achievement</label>
+      <label index="wizard.references_achievement.edit"> Edit the current achievement</label>
+      <label index="wizard.references_achievement.list">Display the achievement table</label>
       <label index="wizard.references_business.add">Add a new category for business segment</label>
       <label index="wizard.references_business.edit"> Edit the current category of the business segment</label>
       <label index="wizard.references_business.list">Display the category table with the business segments</label>
