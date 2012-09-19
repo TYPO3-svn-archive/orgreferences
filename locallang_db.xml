@@ -17,8 +17,10 @@
       <label index="filter_phrase.tx_orgreferences_client">All clients</label>
       <label index="filter_phrase.tx_orgreferences_sector">All sectors</label>
       <label index="filter_phrase.tx_orgreferences_tool">All tools</label>
-      
       <label index="filter_phrase.references">Reference</label>
+
+      <label index="palette.logofiles">Logo and logo description</label>
+
       <label index="tca_phrase.description">Description for Search Engine Optimisation</label>
       <label index="tca_phrase.documents">Documents</label>
       <label index="tca_phrase.embeddedcode">Embedded Code</label>
@@ -48,6 +50,7 @@
       <label index="tx_orgreferences.div_user_headquarter"><![CDATA[User & provider]]></label>
       <label index="tx_orgreferences.div_cal_news"><![CDATA[Calender & news]]></label>
       <label index="tx_orgreferences.div_media">Media</label>
+      <label index="tx_orgreferences.div_logoAndHeader">Logo <![CDATA[&]]> Header</label>
       <label index="tx_orgreferences.div_access">Access</label>
       <label index="tx_orgreferences.div_seo">Search Engines</label>
       <label index="tx_orgreferences.title">Name of the reference</label>

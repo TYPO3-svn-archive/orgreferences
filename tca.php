@@ -782,22 +782,28 @@ $TCA['tx_orgreferences'] = array (
     '0' => array('showitem' =>  
       '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_references,         title, uid_extern, short, text;;;richtext[]:rte_transform[mode=ts];, datetime, static_countries, static_country_zones, location, longitude, latitude, staff, url,'.
       '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_categories,         tx_orgreferences_sector, tx_orgreferences_client, tx_orgreferences_achievement, tx_orgreferences_business, tx_orgreferences_tool,'.
-      '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_user_headquarter,   fe_users,tx_org_headquarters,'.
-      '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_cal_news,           tx_org_cal,tx_org_news,'.
+      '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_logoAndHeader, ' .
+        '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.logofiles;logofiles,' .
+        '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.headerfiles;headerfiles,' .
+        'documents, ' .
       '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
-        'logo, logoseo, ' .
         '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
-        'header, headerseo, documents, ' .
         '--palette--;LLL:EXT:org/locallang_db.xml:palette.image_accessibility;image_accessibility,' .
         '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,' .
         '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,' .
         '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,' .
+      '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_user_headquarter,   fe_users,tx_org_headquarters,'.
+      '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_cal_news,           tx_org_cal,tx_org_news,'.
       '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_access,             hidden;;1;;,fe_group'.
       '--div--;LLL:EXT:orgreferences/locallang_db.xml:tx_orgreferences.div_seo,                keywords, description,'.
     ''),
   ),
   'palettes' => array (
     '1' => array('showitem' => 'starttime,endtime,'),
+    'header' => array (
+      'showitem' => 'header;LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.header, headerseo;LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.headerseo,',
+      'canNotCollapse' => 1,
+    ),
     'image_accessibility' => array (
       'showitem' => 'imageseo;LLL:EXT:org/locallang_db.xml:tca_phrase.imageseo,',
       'canNotCollapse' => 1,
@@ -818,6 +824,10 @@ $TCA['tx_orgreferences'] = array (
     'image_settings' => array (
       'showitem' => 'imagewidth;LLL:EXT:cms/locallang_ttc.xml:imagewidth_formlabel, imageheight;LLL:EXT:cms/locallang_ttc.xml:imageheight_formlabel, imageborder;LLL:EXT:cms/locallang_ttc.xml:imageborder_formlabel, --linebreak--,' .
                     'image_compression;LLL:EXT:cms/locallang_ttc.xml:image_compression_formlabel, image_effects;LLL:EXT:cms/locallang_ttc.xml:image_effects_formlabel, image_frames;LLL:EXT:cms/locallang_ttc.xml:image_frames_formlabel',
+      'canNotCollapse' => 1,
+    ),
+    'logo' => array (
+      'showitem' => 'logo;LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.logo, logoseo;LLL:EXT:orgreferences/locallang_db.xml:tca_phrase.logoseo,',
       'canNotCollapse' => 1,
     ),
   )
